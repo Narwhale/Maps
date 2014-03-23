@@ -19,6 +19,7 @@
 <score>
 	<time>8m</time>
 </score>
+<autorespawn/>
 <classes family="ghost" sticky="true">
     <class name="Blasternaut" default="true" description="The default kit!" longdescription="The default kit!" icon="tnt" restrict="false" sticky="false">
         <permission>grenades.use</permission>
@@ -39,10 +40,10 @@
     </class>
 </classes>
 <kits>
-    <kit name="red" parents="portalr">
+    <kit name="portalr" parents="portal">
         <chestplate name="`4`lBlast Shell" enchantment="protection explosions:2" color="ff0000">leather chestplate</chestplate>
     </kit>
-    <kit name="blue" parents="portalb">
+    <kit name="portalb" parents="portal">
         <chestplate name="`4`lBlast Shell" enchantment="protection explosions:2" color="0000ff">leather chestplate</chestplate>
     </kit>
 </kits>
@@ -88,10 +89,10 @@
 </hunger>
 <regions>
 	<rectangle name="main" min="oo,oo" max="-oo,-oo"/>
-	<cylinder name="redspawn" base="0,15,-42" radius="3" height="5"/>
-	<cylinder name="bluespawn" base="0,15,43" radius="3" height="5"/>
-	<cuboid name="redkit" min="-0,12,43" max="1,12,41"/>
-	<cuboid name="bluekit" min="-0,12,-43" max="1,12,-41"/>
+	<circle name="redspawn" base="0,15,-42" radius="5"/>
+	<circle name="bluespawn" base="0,15,43" radius="5"/>
+	<cuboid name="redkit" min="-1.0,9.0,-39.0" max="1.0,11.0,-39.0"/>
+	<cuboid name="bluekit" min="-1.0,9.0,39.0" max="1.0,11.0,39.0"/>
 	
 	<apply block="only-tnt" message="You can only use TNT!">
 		<region name="main"/>
@@ -130,35 +131,35 @@
 </regions>
 <spawns>
 	<spawn team="blue" yaw="180">
-		<cuboid min="-1.0,8.0,42.0" max="1.0,8.0,44.0"/>
+		<cuboid min="-1.0,9.0,42.0" max="1.0,9.0,44.0"/>
 	</spawn>
 	<spawn team="red" yaw="0">
-		<cuboid min="-1.0,8.0,-44.0" max="1.0,8.0,-42.0"/>
+		<cuboid min="-1.0,9.0,-44.0" max="1.0,9.0,-42.0"/>
 	</spawn>
 	<default yaw="90">
 		<cuboid min="-64,24,1" max="-62,24,0"/>
 	</default>
 </spawns>
 <portals>
-	<portal y="3" yaw="@0">
+	<portal x="@0" y="@15" z="@43" yaw="@0">
 		<region name="bluekit"/>
 	</portal>
-	<portal y="3" yaw="@180">
+	<portal x="@0" y="@15" z="@-42" yaw="@180">
 		<region name="redkit"/>
 	</portal>
 </portals>
 <proximity-alarms>
-    <proximity-alarm flare-radius="2">
+    <proximity-alarm flare-radius="3">
         <region>
-            <cuboid min="oo,oo" max="-oo,-oo"/>
+            <circle center="0.0,0.0,0.0" radius="8"/>
         </region>
         <detect>
             <team>red</team>
         </detect>
     </proximity-alarm>
-	<proximity-alarm flare-radius="2">
+	<proximity-alarm flare-radius="3">
         <region>
-            <cuboid min="oo,oo" max="-oo,-oo"/>
+            <circle center="0.0,0.0,0.0" radius="8"/>
         </region>
         <detect>
             <team>blue</team>
