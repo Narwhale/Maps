@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.2">
 <name>BN: Overdrive</name>
-<version>1.0.0</version>
+<version>1.0.1</version>
 <objective>Use your grenades and TNT to blow up as many people as you can!</objective>
 <rules>
 	<rule>Fall damage is disabled!</rule>
@@ -10,28 +10,29 @@
 	<author>TheZaner</author>
 </authors>
 <contributors>
-	<contributor contribution="Building Assistance">ItsMiiOlly</contributor>
+	<contributor contribution="Building, XML Fixing and Testing">ItsMiiOlly</contributor>
 </contributors>
 <teams>
     <team color="blue" max="10" max-overfill="12">Blue Team</team>
     <team color="dark red" max="10" max-overfill="12">Red Team</team>
 </teams>
 <score>
-	<time>8m</time>
+	<time>5m</time>
 </score>
+<autorespawn/>
 <classes family="ghost" sticky="true">
     <class name="Blasternaut" default="true" description="The default kit!" longdescription="The default kit!" icon="tnt" restrict="false" sticky="false">
         <permission>grenades.use</permission>
         <permission>doublejump.use</permission>
-        <kit name="portal">
+        <kit name="spawn">
             <item slot="0" name="`cTNT Launcher">bow</item>
-            <item slot="1" amount="4">tnt</item>
+            <item slot="1" amount="4" name="`c`lTNT">tnt</item>
             <item slot="2" name="`6`lGrenade" amount="32">fireball</item>
             <item slot="8" damage="8229">potion</item>
             <item slot="28" amount="6">arrow</item>
             <boots>iron boots</boots>
-            <potion duration="8" amplifier="25" ambient="true">heal</potion>
-            <potion duration="8" amplifier="5" ambient="true">damage resistance</potion>
+            <potion duration="12" amplifier="25" ambient="true">heal</potion>
+            <potion duration="12" amplifier="5" ambient="true">damage resistance</potion>
             <potion duration="oo" amplifier="2" ambient="true">speed</potion>
             <potion duration="oo" amplifier="1" ambient="true">jump</potion>
 			<potion duration="oo" amplifier="1" ambient="true">night vision</potion>
@@ -53,13 +54,13 @@
     <tool>leather chestplate</tool>
     <tool>iron boots</tool>
 	<tool>bow</tool>
-	<tool>potion</tool>
 </toolrepair>
 <itemremove>
 	<item>blaze rod</item>
+	<item>glass bottle</item>
+	<item>stone sword</item>
 </itemremove>
 <itemkeep>
-    <item>stone sword</item>
 	<item>iron chestplate</item>
 	<item>monster egg</item>
 </itemkeep>
@@ -111,8 +112,6 @@
 	<rectangle name="main" min="oo,oo" max="-oo,-oo"/>
 	<cylinder name="redspawn" base="0,9,-42" radius="4" height="6"/>
 	<cylinder name="bluespawn" base="0,9,43" radius="4" height="6"/>
-	<cuboid name="redkit" min="2,9,-40" max="-1,11,-40"/>
-	<cuboid name="bluekit" min="-2,9,40" max="2,11,40"/>
 	
 	<apply block="only-tnt" message="You can only use TNT!">
 		<region name="main"/>
@@ -161,4 +160,22 @@
 		<cylinder base="-63,26,0" radius="2" height="0"/>
 	</default>
 </spawns>
+<proximity-alarms>
+    <proximity-alarm flare-radius="4">
+        <region>
+            <cylinder base="0,17,0" radius="10" height="6"/>
+        </region>
+        <detect>
+            <team>red</team>
+        </detect>
+    </proximity-alarm>
+    <proximity-alarm flare-radius="4">
+        <region>
+            <cylinder base="0,17,0" radius="10" height="6"/>
+        </region>
+        <detect>
+            <team>blue</team>
+        </detect>
+    </proximity-alarm>
+</proximity-alarms>
 </map>
