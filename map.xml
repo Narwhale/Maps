@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<map proto="1.3.2">
+<name>BN: Overdrive</name>
+<version>1.0.0</version>
+<objective>Use your grenades and TNT to blow up as many people as you can!</objective>
+<rules>
+	<rule>Fall damage is disabled!</rule>
+</rules>
+<authors>
+	<author>TheZaner</author>
+</authors>
+<contributors>
+	<contributor contribution="Building Assistance">ItsMiiOlly</contributor>
+</contributors>
+<teams>
+    <team color="blue" max="10" max-overfill="12">Blue Team</team>
+    <team color="dark red" max="10" max-overfill="12">Red Team</team>
+</teams>
+<score>
+	<time>8m</time>
+</score>
+<classes family="ghost" sticky="true">
+    <class name="Blasternaut" default="true" description="The default kit!" longdescription="The default kit!" icon="tnt" restrict="false" sticky="false">
+        <permission>grenades.use</permission>
+        <permission>doublejump.use</permission>
+        <kit name="portal">
+            <item slot="0" name="`cTNT Launcher">bow</item>
+            <item slot="1" amount="4">tnt</item>
+            <item slot="2" name="`6`lGrenade" amount="32">fireball</item>
+            <item slot="8" damage="8229">potion</item>
+            <item slot="28" amount="6">arrow</item>
+            <boots>iron boots</boots>
+            <potion duration="8" amplifier="25" ambient="true">heal</potion>
+            <potion duration="8" amplifier="5" ambient="true">damage resistance</potion>
+            <potion duration="oo" amplifier="2" ambient="true">speed</potion>
+            <potion duration="oo" amplifier="1" ambient="true">jump</potion>
+			<potion duration="oo" amplifier="1" ambient="true">night vision</potion>
+        </kit>
+    </class>
+</classes>
+<kits>
+    <kit name="red">
+        <chestplate name="`4`lBlast Shell" enchantment="protection explosions:2" color="ff0000">leather chestplate</chestplate>
+    </kit>
+    <kit name="blue">
+        <chestplate name="`4`lBlast Shell" enchantment="protection explosions:2" color="0000ff">leather chestplate</chestplate>
+    </kit>
+    <kit name="obs">
+    	<potion duration="oo" amplifier="1" ambient="true">night vision</potion>
+    </kit>
+</kits>
+<toolrepair>
+    <tool>leather chestplate</tool>
+    <tool>iron boots</tool>
+	<tool>bow</tool>
+	<tool>potion</tool>
+</toolrepair>
+<itemremove>
+	<item>blaze rod</item>
+</itemremove>
+<itemkeep>
+    <item>stone sword</item>
+	<item>iron chestplate</item>
+	<item>monster egg</item>
+</itemkeep>
+<killreward>
+    <item amount="2">arrow</item>
+    <item amount="2">tnt</item>
+    <item amount="6" name="`6`lGrenade">fireball</item>
+    <item damage="8229">potion</item>
+</killreward>
+<disabledamage>
+    <damage>fall</damage>
+</disabledamage>
+<modifybowprojectile>
+    <projectile>TNTPrimed</projectile>
+    <velocityMod>1.0</velocityMod>
+</modifybowprojectile>
+<tnt>
+    <instantignite>on</instantignite>
+    <blockdamage>off</blockdamage>
+</tnt>
+<mobs>
+    <filter>
+        <allow>
+            <mob>creeper</mob>
+            <spawn>spawner egg</spawn>
+        </allow>
+    </filter>
+</mobs>
+<timelock>on</timelock>
+<hunger>
+    <depletion>off</depletion>
+</hunger>
+<filters>
+	<filter name="only-tnt">
+		<block>tnt</block>
+	</filter>
+	<filter name="only-red" parents="deny-players">
+		<allow>
+			<team>red</team>
+		</allow>
+	</filter>
+	<filter name="only-blue" parents="deny-players">
+		<allow>
+			<team>red</team>
+		</allow>
+	</filter>
+</filters>
+<regions>
+	<rectangle name="main" min="oo,oo" max="-oo,-oo"/>
+	<cylinder name="redspawn" base="0,9,-42" radius="4" height="6"/>
+	<cylinder name="bluespawn" base="0,9,43" radius="4" height="6"/>
+	<cuboid name="redkit" min="2,9,-40" max="-1,11,-40"/>
+	<cuboid name="bluekit" min="-2,9,40" max="2,11,40"/>
+	
+	<apply block="only-tnt" message="You can only use TNT!">
+		<region name="main"/>
+	</apply>
+	<apply block="only-red" message="You may not enter the enemies base!">
+		<region name="redspawn"/>
+	</apply>
+	<apply block="only-blue" message="You may not enter the enemies base!">
+		<region name="bluespawn"/>
+	</apply>
+	<apply kit="blue">
+		<cuboid min="-2,9,40" max="2,11,39"/>
+	</apply>
+	<apply kit="red">
+		<cuboid min="2,9,-40" max="-2,11,-39"/>
+	</apply>
+	<apply velocity="@0,1.75,-0.50">
+        <block>-34.0,14.0,17.0</block>
+    </apply>
+	<apply velocity="@0,1.75,0.50">
+		<block>33.0,14.0,17.0</block>
+    </apply>
+	<apply velocity="@0,1.75,-0.50">
+		<block>-34.0,14.0,-17.0</block>
+    </apply>
+	<apply velocity="@0,1.75,0.50">
+		<block>33.0,14.0,-17.0</block>
+    </apply>
+</regions>
+<portals>
+	<portal x="@0" y="@15" z="@43" yaw="@179">
+		<cuboid min="-2,9,40" max="2,11,39"/>
+	</portal>
+	<portal x="@0" y="@15" z="@-42" yaw="@0">
+		<cuboid min="2,9,-40" max="-2,11,-39"/>
+	</portal>
+</portals>
+<spawns>
+	<spawn team="blue" yaw="180">
+		<cylinder base="0,10,43" radius="1" height="0"/>
+	</spawn>
+	<spawn team="red" yaw="0">
+		<cylinder base="0,10,-42" radius="1" height="0"/>
+	</spawn>
+	<default yaw="90" kit="obs">
+		<cylinder base="-63,26,0" radius="2" height="0"/>
+	</default>
+</spawns>
+</map>
