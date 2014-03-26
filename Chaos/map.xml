@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<map proto="1.3.1">
+<name>Spleef: Chaos</name>
+<version>1.0</version>
+<objective>Take out the other team within 5 minutes</objective>
+<authors>
+    <author>TheZaner</author>
+</authors>
+<blitz>
+    <time>5m</time>        
+    <lives>1</lives>
+    <broadcastLives>false</broadcastLives>
+    <title>Blitz: Spleef</title>
+</blitz>
+<teams>
+   <team color="dark red" max="20" overhead-color="red" max-overfill="25">TNT Team</team>
+   <team color="dark green" overhead-color="green" max="20" max-overfill="25">Creeper Team</team>
+</teams>
+<rules>
+    <rule>Fall damage is disabled!</rule>
+</rules>
+<kits>
+	<kit name="spawn">
+		<item amount="1" enchantment="dig speed:5;damage all:1" slot="0">diamond pickaxe</item>
+		<item amount="16" damage="50" name="`2`lCreepers" slot="1">monster egg</item>
+		<item amount="1" name="`a[`6Lightning`a]`f Bow" slot="2">bow</item>
+		<item amount="32" slot="3">arrow</item>
+		<potion duration="oo" amplifier="2" ambient="true">fast digging</potion>
+		<potion duration="oo" amplifier="1" ambient="true">jump</potion>
+		<potion duration="oo" amplifier="1" ambient="true">damage resistance</potion>
+		<potion duration="oo" amplifier="1" ambient="true">regeneration</potion>
+	</kit>
+	<kit name="red">
+		<boots attributes="generic.maxHealth:add:2" amount="1" damage="36" color="ff0000">leather boots</boots>
+		<leggings attributes="generic.maxHealth:add:6" amount="1" damage="36" color="ff0000">leather leggings</leggings>
+		<chestplate attributes="generic.maxHealth:add:8" amount="1" damage="36" color="ff0000">leather chestplate</chestplate>
+		<helmet attributes="generic.maxHealth:add:2" amount="1" damage="36" color="ff0000">leather helmet</helmet>
+	</kit>
+	<kit name="blue">
+		<boots attributes="generic.maxHealth:add:2" amount="1" damage="36" color="0000ff">leather boots</boots>
+		<leggings attributes="generic.maxHealth:add:6" amount="1" damage="36" color="0000ff">leather leggings</leggings>
+		<chestplate attributes="generic.maxHealth:add:8" amount="1" damage="36" color="0000ff">leather chestplate</chestplate>
+		<helmet attributes="generic.maxHealth:add:2" amount="1" damage="36" color="0000ff">leather helmet</helmet>
+	</kit>
+</kits>
+<kit name="health" force="true">
+    <health>2</health>
+</kit>
+<itemremove>
+    <item>diamond pickaxe</item>
+    <item>bow</item>
+    <item>leather helmet</item>
+	<item>leather chestplate</item>
+	<item>leather leggings</item>
+	<item>leather boots</item>
+	<item>gunpowder</item>
+	<item>stained clay</item>
+	<item>step</item>
+	<item>double step</item>
+	<item>cobblestone wall</item>
+</itemremove>
+<disabledamage>
+    <damage>fall</damage>
+</disabledamage>
+<modifybowprojectile>
+    <projectile>LightningStrike</projectile>
+    <velocityMod>1.0</velocityMod>
+</modifybowprojectile>
+<tnt>
+    <instantignite>on</instantignite>
+    <blockdamage>on</blockdamage>
+    <yield>0</yield>
+</tnt>
+<mobs>
+    <filter>
+        <allow>
+            <mob>creeper</mob>
+            <spawn>spawner egg</spawn>
+        </allow>
+    </filter>
+</mobs>
+<killreward>
+    <item amount="2">arrow</item>
+</killreward>
+<gamerules>
+	<mobGriefing>true</mobGriefing>
+</gamerules>
+<timelock>on</timelock>
+<friendlyfirerefund>on</friendlyfirerefund>
+<hunger>
+    <depletion>off</depletion>
+</hunger>
+<autorespawn/>
+<playable>
+	<cylinder base="0,0,0" height="oo" radius="60"/>
+</playable>
+<renewables>
+    <renewable rate="3" grow="true" particles="true" sound="true" avoid-entities="true">
+        <region>
+            <cylinder base="0,0,0" height="1" radius="60"/>
+        </region>
+        <replace>stained clay</replace>
+    </renewable>
+</renewables>
+<spawns>
+    <spawn team="red" kit="red" yaw="0">
+        <cuboid min="-33,6,-28" max="-30,6,-25"/>
+    </spawn>
+    <spawn team="blue" kit="blue" yaw="0">
+        <cuboid min="30,6,-28" max="33,6,-25"/>
+    </spawn>
+    <default yaw="0">
+        <cuboid min="0,28.0,-75" max="1,28,-73"/>
+    </default>
+</spawns>
+</map>
