@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<map proto="1.3.2">
+<name>300cc</name>
+<version>0.1</version>
+<objective>Eliminate all members of the opposing teams in 5 minutes.</objective>
+<authors>
+    <author>TheZaner</author>
+</authors>
+<blitz>
+    <time>5m</time>        
+    <lives>1</lives>
+    <broadcastLives>false</broadcastLives>
+    <title>Race: Battle</title>
+</blitz>
+<teams>
+   <team color="dark red" max="10" max-overfill="12">Red Team</team>
+   <team color="blue" max="10" max-overfill="12">Blue Team</team>
+   <team color="yellow" max="10" max-overfill="12">Yellow Team</team>
+   <team color="green" max="10" max-overfill="12">Green Team</team>
+</teams>
+<rules>
+    <rule>Fall damage is disabled!</rule>
+</rules>
+<kits>
+	<kit name="spawn">
+		<item amount="1" name="Hammer" slot="0">stone axe</item>
+		<item amount="1" enchantment="dig speed:255" name="`a[`6`lBox Crusher`a]`f Shears" slot="1">shears</item>
+		<item amount="1" name="`a[`6`lCreeper`a] `fBow" slot="2">bow</item>
+		<item amount="1" slot="3">golden apple</item>
+		<item amount="2" slot="8">arrow</item>
+		<leggings>iron leggings</leggings>
+		<potion duration="10" ambient="true" amplifier="4">damage resistance</potion>
+		<potion duration="oo" ambient="true" amplifier="1">speed</potion>
+		<potion duration="oo" ambient="true" amplifier="1">night vision</potion>
+	</kit>
+	<kit name="blue">
+		<helmet color="334CB2">leather helmet</helmet>
+		<chestplate color="334CB2">leather chestplate</chestplate>
+		<boots color="334CB2">leather boots</boots>
+	</kit>
+	<kit name="red">
+		<helmet color="993333">leather helmet</helmet>
+		<chestplate color="993333">leather chestplate</chestplate>
+		<boots color="993333">leather boots</boots>
+	</kit>
+	<kit name="yellow">
+		<helmet color="E5E533">leather helmet</helmet>
+		<chestplate color="E5E533">leather chestplate</chestplate>
+		<boots color="E5E533">leather boots</boots>
+	</kit>
+	<kit name="green">
+		<helmet color="667F33">leather helmet</helmet>
+		<chestplate color="667F33">leather chestplate</chestplate>
+		<boots color="667F33">leather boots</boots>
+	</kit>
+	<kit name="health" force="true">
+		<health>16</health>
+	</kit>
+</kits>
+<toolrepair>
+    <tool>stone axe</tool>
+    <tool>bow</tool>
+	<tool>shears</tool>
+	<tool>golden apple</tool>
+	<tool>leather helmet</tool>
+	<tool>leather chestplate</tool>
+	<tool>iron leggings</tool>
+	<tool>leather boots</tool>
+</toolrepair>
+<disabledamage>
+    <damage>fall</damage>
+</disabledamage>
+<modifybowprojectile>
+    <projectile>Creeper</projectile>
+    <velocityMod>1.5</velocityMod>
+</modifybowprojectile>
+<tnt>
+    <instantignite>on</instantignite>
+    <blockdamage>off</blockdamage>
+</tnt>
+<killreward>
+    <item amount="2">arrow</item>
+</killreward>
+<timelock>on</timelock>
+<hunger>
+    <depletion>off</depletion>
+</hunger>
+<spawns>
+    <spawn team="red" kit="red" yaw="0">
+        <cuboid min="-2,36,-44" max="2,36,-40"/>
+    </spawn>
+    <spawn team="blue" kit="blue" yaw="-180">
+        <cuboid min="-2,36,40" max="2,36,44"/>
+    </spawn>
+    <spawn team="yellow" kit="yellow" yaw="90">
+        <cuboid min="40,36,-2" max="44,36,2"/>
+    </spawn>
+    <spawn team="green" kit="green" yaw="-90">
+        <cuboid min="-44,36,-2" max="-40,36,2"/>
+    </spawn>
+    <default yaw="-90">
+        <cuboid min="-2,58,-1" max="2,58,1"/>
+    </default>
+</spawns>
+<regions>
+	<rectangle name="main" min="oo,oo" max="-oo,-oo"/>
+	<apply block="only-tntwool">
+		<region name="main"/>
+	</apply>
+</regions>
+<filters>
+	<filter name="only-tntwool" parents="deny-all">
+    <block>tnt</block>
+	<block>wool</block>
+</filters>
+<include src="300ccrenewables.xml"/>
+<include src="blitz-global.xml"/>
+</map>
