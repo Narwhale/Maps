@@ -4,281 +4,281 @@
         <region>
             <block>42,40,-22</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>22,40,-42</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>-22,40,-42</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>-42,40,-22</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>-42,40,22</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>-22,40,42</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>22,40,42</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>42,40,22</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>42,40,22</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>21,32,9</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>9,32,21</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>-9,32,21</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>-21,32,9</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>-21,32,-9</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>-9,32,-21</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>21,32,-9</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>6,39,6</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>6,39,-6</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>-6,39,-6</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
     <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
 			<block>-6,39,6</block>
         </region>
-        <shuffle damage="6">wool</shuffle>
-        <shuffle damage="5">wool</shuffle>
-        <shuffle damage="10">wool</shuffle>
-        <shuffle damage="11">wool</shuffle>
-        <shuffle damage="12">wool</shuffle>	
-        <shuffle damage="1">wool</shuffle>
-        <shuffle damage="8">wool</shuffle>
-	    <shuffle damage="4">wool</shuffle>
-        <shuffle damage="14">wool</shuffle>
+        <shuffle>diamond block</shuffle>
+        <shuffle>gold block</shuffle>
+        <shuffle>emerald block</shuffle>
+        <shuffle>iron block</shuffle>
+        <shuffle>obsidian</shuffle>	
+        <shuffle>glass</shuffle>
+        <shuffle>sponge</shuffle>
+	    <shuffle>cobblestone</shuffle>
+        <shuffle>wood</shuffle>
     </renewable>
 </renewables>
 <blockdrops>
@@ -287,7 +287,7 @@
 			<rectangle min="oo,oo" max="-oo,-oo"/>
 		</region>
         <filter>
-            <block damage="6">wool</block>
+            <block>diamond block</block>
         </filter>
         <drops>
             <item damage="16389" name="`c`lMushroom" potions="speed:100:5:true">potion</item>
