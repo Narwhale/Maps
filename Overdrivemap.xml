@@ -158,22 +158,22 @@
   		<cylinder base=" 63,26,0" radius="2" height="0"/>
   	</default>
   </spawns>
-  <proximity alarms>
-      <proximity alarm flare-radius="4">
+  <proximity-alarms>
+      <proximity-alarm flare-radius="4">
           <region>
               <cylinder base="0,17,0" radius="10" height="6"/>
           </region>
           <detect>
               <team>red</team>
           </detect>
-      </proximity alarm>
-      <proximity alarm flare-radius="4">
+      </proximity-alarm>
+      <proximity-alarm flare-radius="4">
           <region>
               <cylinder base="0,17,0" radius="10" height="6"/>
           </region>
           <detect>
               <team>blue</team>
           </detect>
-      </proximity alarm>
-  </proximity alarms>
+      </proximity-alarm>
+  </proximity-alarms>
 </map>
