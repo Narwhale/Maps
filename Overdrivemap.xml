@@ -159,7 +159,7 @@
   	</default>
   </spawns>
   <proximity alarms>
-      <proximity alarm flare radius="4">
+      <proximity alarm flare-radius="4">
           <region>
               <cylinder base="0,17,0" radius="10" height="6"/>
           </region>
@@ -167,7 +167,7 @@
               <team>red</team>
           </detect>
       </proximity alarm>
-      <proximity alarm flare radius="4">
+      <proximity alarm flare-radius="4">
           <region>
               <cylinder base="0,17,0" radius="10" height="6"/>
           </region>
