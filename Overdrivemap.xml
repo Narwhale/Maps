@@ -57,9 +57,7 @@
   	<tool>bow</tool>
   </toolrepair>
   <itemremove>
-  	<item>blaze rod</item>
   	<item>glass bottle</item>
-  	<item>stone sword</item>
   </itemremove>
   <itemkeep>
   	<item>iron chestplate</item>
