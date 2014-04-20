@@ -129,4 +129,7 @@
 <disabledamage>
     <damage>fire tick</damage>
 </disabledamage>
+<itemremove>
+	<item>ender portal</item>
+</itemremove>
 </map>
