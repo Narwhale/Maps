@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.1">
 <name>OCGP: Rage Valley</name>
-<version>1.0.1</version>
+<version>1.1.1</version>
 <objective>Diamond Cup: Be the first car to finish 3 laps.</objective>
 <include src="../race.xml"/>
 <authors>
@@ -17,10 +17,25 @@
         <cuboid min="39,4,47" max="51,6,59"/>
     </box>
 </score>
+<destroyables name="Monument" materials="obsidian" completion="100%">
+    <destroyable>
+       <cuboid min="109,30,-4" max="109,31,6"/>
+    </destroyable>
+</destroyables>
+<modes>
+    <mode after="1s" material="redstone block" name="`a3"/>
+    <mode after="2s" material="gold block" name="`e2"/>
+    <mode after="3s" material="emerald block" name="`c1"/>
+    <mode after="4s" material="air" name="`6Go!"/>
+</modes>
 <timelock>on</timelock>
 <regions>
 	<cylinder name="observers" base="0,49,-1" radius="2" height="0"/>
-	<cuboid name="spawn" min="120,29,-4" max="116,29,6"/>
+	<cuboid name="spawn" min="110,29,6" max="120,29,-4"/>
+	<cuboid name="kit" min="39,4,47" max="51,6,59"/>
+	<apply kit="kit">
+		<region name="kit"/>
+	</apply>
 </regions>
 <spawns>
     <spawn team="blue" kit="blue" yaw="90"><region name="spawn"/></spawn>
@@ -37,6 +52,66 @@
     <spawn team="black" kit="black" yaw="90"><region name="spawn"/></spawn>
     <default yaw="-90"><region name="observers"/></default>
 </spawns>
+<kits>
+    <kit name="spawn" force="true">
+		<item amount="1" name="`c`oBlocked Spot" slot="34">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="35">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="32">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="33">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="9">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="10">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="11">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="12">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="13">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="14">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="15">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="17">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="16">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="19">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="18">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="21">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="20">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="23">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="22">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="25">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="24">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="27">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="26">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="29">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="28">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="31">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="30">ender portal</item>
+	</kit>
+	<kit name="kit">
+		<item amount="1" name="`c`oBlocked Spot" slot="34">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="35">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="32">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="33">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="9">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="10">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="11">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="12">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="13">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="14">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="15">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="17">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="16">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="19">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="18">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="21">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="20">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="23">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="22">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="25">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="24">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="27">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="26">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="29">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="28">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="31">ender portal</item>
+		<item amount="1" name="`c`oBlocked Spot" slot="30">ender portal</item>
+		</kit>
+</kits>
 <portals>
     <portal x="@-62" y="@20" z="@-40" yaw="@0">
         <cuboid min="-43,20,-81" max="-33,24,-84"/>
