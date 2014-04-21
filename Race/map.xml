@@ -23,10 +23,10 @@
     </destroyable>
 </destroyables>
 <modes>
-    <mode after="1s" material="redstone block" name="`a3"/>
-    <mode after="2s" material="gold block" name="`e2"/>
-    <mode after="3s" material="emerald block" name="`c1"/>
-    <mode after="4s" material="air" name="`6Go!"/>
+    <mode after="2s" material="redstone block" name="`a3"/>
+    <mode after="3s" material="gold block" name="`e2"/>
+    <mode after="4s" material="emerald block" name="`c1"/>
+    <mode after="5s" material="air" name="`6Go!"/>
 </modes>
 <timelock>on</timelock>
 <regions>
