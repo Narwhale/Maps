@@ -17,7 +17,7 @@
         <cuboid min="39,4,47" max="51,6,59"/>
     </box>
 </score>
-<destroyables name="Monument" materials="obsidian" completion="100%">
+<destroyables name="Monument" materials="obsidian" completion="100%" owner="blue">
     <destroyable>
        <cuboid min="109,30,-4" max="109,31,6"/>
     </destroyable>
