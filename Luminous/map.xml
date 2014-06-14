@@ -1,19 +1,21 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
 <name>LuminousCTW</name>
-<version>1.0.0</version>
+<version>1.1.0</version>
 <objective>Capture both of the enemies wools.</objective>
 <authors>
-    <author>TheZaner</author>
-    <author>ElectroidFilms</author>
+    <author contribution="Building, XML">TheZaner</author>
+    <author contribution="Building, ideas, XML">ElectroidFilms</author>
 </authors>
 <contributors>
-    <contributor>xXFracXx</contributor>
-    <contributor>lonelyhornet</contributor>
+    <contributor contribution="Ideas, Building">xXFracXx</contributor>
+    <contributor contribution="Ideas and Moaning">moanlyhornet</contributor>
+	<contributor contribution="Class Feedback">dragonstomper64</contributor>
+	<contributor contribution="XML Fixing">ItsMiiOlly</contributor>
 </contributors>
 <teams>
-   <team color="dark red" max="15">Red Team</team>
-   <team color="blue" max="15">Blue Team</team>
+   <team color="dark red" max="20">Red Team</team>
+   <team color="blue" max="20">Blue Team</team>
 </teams>
 <wools team="red">
     <wool color="light blue" craftable="false">
@@ -32,51 +34,59 @@
     </wool>
 </wools>
 <kits>
-    <kit name="spawn">
-        <potion duration="5" amplifier="5">damage resistance</potion>
+    <kit name="spawn" potion-particles="false">
+	<!-- Placeholder Kit -->
     </kit>
-    <kit name="resistance">
-        <potion duration="1" amplifier="6">damage resistance</potion>
-    </kit>
-    <kit name="attacker">
+    <kit name="attacker" potion-particles="false">
         <item amount="1" slot="0" damage="-10000">stone sword</item>
         <item amount="1" enchantment="arrow infinite:1" slot="1">bow</item>
         <item amount="1" name="Weak Clay Drill" slot="2">stone pickaxe</item>
         <item amount="1" slot="3">iron axe</item>
-        <item amount="64" damage="12" slot="4" name="`6`lDirt">stained clay</item>
+        <item amount="64" damage="12" slot="4" name="`6Dirt">stained clay</item>
         <item amount="64" slot="5">golden carrot</item>
         <item amount="2" slot="6">golden apple</item>
         <item amount="8" slot="8">gold nugget</item>
-        <chestplate amount="1">chainmail chestplate</chestplate>
+		<item amount="1" slot="28">arrow</item>
+		<item amount="1" slot="7" attributes="generic.movementSpeed:base:0.3" name="`e`lLumious Star">nether star</item>
+        <chestplate amount="1" attributes="generic.knockbackResistance:base:0.1">chainmail chestplate</chestplate>
         <potion duration="oo" amplfiier="1">speed</potion>
         <potion duration="oo" amplifier="1">night vision</potion>
+		<potion duration="5" amplifier="255">slow</potion>
+		<potion duration="5" amplifier="155">jump</potion>
     </kit>
-    <kit name="defender" force="true" parents="spawn">
+    <kit name="defender" force="true" parents="spawn" potion-particles="false">
         <item amount="1" slot="0" damage="-10000">iron sword</item>
-        <item amount="1" enchantment="arrow infinite:1" slot="1">bow</item>
+        <item amount="1" slot="1">bow</item>
         <item amount="1" enchantment="dig speed:2" name="Clay Drill" slot="2">iron pickaxe</item>
         <item amount="1" slot="3">iron axe</item>
-        <item amount="64" damage="12" slot="4" name="`6`lDirt">stained clay</item>
+        <item amount="64" damage="12" slot="4" name="`6Dirt">stained clay</item>
         <item amount="64" damage="1" slot="5">wood</item>
+		<item amount="64" damage="1" slot="17">wood</item>
+		<item slot="9" amount="3">bucket</item>
         <item amount="64" slot="7">golden carrot</item>
         <item amount="8" slot="8">gold nugget</item>
-        <item amount="1" slot="28">arrow</item>
-        <chestplate amount="1">iron chestplate</chestplate>
+        <item amount="32" slot="28">arrow</item>
+        <chestplate amount="1" attributes="generic.movementSpeed:base:-0.1">iron chestplate</chestplate>
         <potion duration="oo" amplifier="1">night vision</potion>
         <potion duration="oo" amplifier="2">fast digging</potion>
+		<potion duration="10" amplifier="255">slow</potion>
+		<potion duration="10" amplifier="155">jump</potion>
     </kit>
-    <kit name="red-attacker" parents="attacker">
+    <kit name="red-attacker" parents="attacker" potion-particles="false">
         <boots amount="1" color="993333">leather boots</boots>
     </kit>
-    <kit name="blue-attacker" parents="attacker">
+    <kit name="blue-attacker" parents="attacker" potion-particles="false">
         <boots amount="1" color="334CB2">leather boots</boots>
     </kit>
-    <kit name="red-defender" parents="defender">
+    <kit name="red-defender" parents="defender" potion-particles="false">
         <boots amount="1" color="993333">leather boots</boots>
     </kit>
-    <kit name="blue-defender" parents="defender">
+    <kit name="blue-defender" parents="defender" potion-particles="false">
         <boots amount="1" color="334CB2">leather boots</boots>
     </kit>
+	<kit name="observers" potion-particles="false">
+		<potion duration="oo" amplfiier="1">night vision</potion>
+	</kit>
 </kits>
 <toolrepair>
     <tool>leather boots</tool>
@@ -88,16 +98,6 @@
     <tool>diamond pickaxe</tool>
     <item>iron axe</item>
 </toolrepair>
-<itemremove>
-    <item>gold ingot</item>
-    <item>gold block</item>
-    <item>golden carrot</item>
-    <item>arrow</item>
-    <item>rotten flesh</item>
-    <item>chest</item>
-    <item>step</item>
-    <item>iron fence</item>
-</itemremove>
 <mobs>
     <filter>
         <spawn>spawner</spawn>
@@ -167,6 +167,12 @@
     </portal>
 </portals>
 <filters>
+	<filter name="deny-interaction">
+		<deny>
+			<block>chest</block>
+			<block>trapped chest</block>
+		</deny>
+	</filter>
     <filter name="wool-room" parents="deny-all">
         <allow><block>iron fence</block></allow>
         <allow><block>iron block</block></allow>
@@ -197,8 +203,6 @@
     <rectangle name="woolroom-b" min="-54,50" max="52,67"/>
     <rectangle name="spawn-b" min="7,14" max="-8,46"/>
     <rectangle name="spawn-r" min="7,-163" max="-8,-196"/>
-    <cuboid name="no-resistance-r" min="-4,15,-172" max="2,16,-172"/>
-    <cuboid name="no-resistance-b" min="2,15,22" max="-4,17,22"/>
     <cuboid name="spawn-o" min="-34,50,-69" max="-44,38,-79"/>
     <rectangle name="yellow-woolroom" min="51,-216" max="34,-200"/>
     <rectangle name="orange-woolroom" min="-37,-216" max="-54,-200"/>
@@ -217,12 +221,6 @@
     </apply>
     <apply kit="blue-attacker">
         <cuboid min="1,16,34" max="3,15,35"/>
-    </apply>
-    <apply kit="resistance">
-        <region name="no-resistance-b"/>
-    </apply>
-    <apply kit="resistance">
-        <region name="no-resistance-r"/>
     </apply>
     <apply block-break="deny-all" message="Do not break spawn!">
         <region name="spawn-o"/>
@@ -245,10 +243,13 @@
         <region name="spawn-b"/>
         <region name="spawn-r"/>
     </apply>
-    <apply block-place="deny-all" block-break="wool-room" message="You may only break iron blocks, diamond blocks and iron bars.">
+    <apply block-place="deny-all" block-break="wool-room" message="You may only break iron and diamond blocks in this area.">
         <region name="woolroom-r"/>
         <region name="woolroom-b"/>
     </apply>
+	<apply use="deny-interaction" message="`c`oStorage has been temporarily disabled to prevent class mixing.">
+		<region name="main"/>
+	</apply>
 </regions>
 <spawns>
     <spawn team="red" kit="spawn" yaw="0">
@@ -257,8 +258,8 @@
     <spawn team="blue" kit="spawn" yaw="180">
         <cuboid min="0,15,43" max="-2,15,42"/>
     </spawn>
-    <default yaw="-90">
-        <block>-39.5,47,-74.5</block>
+    <default yaw="-90" kit="observers">
+        <block>-39.5,46,-74.5</block>
     </default>
 </spawns>
 <blockdrops>
@@ -318,12 +319,19 @@
     </rule>
 </blockdrops>
 <itemremove>
+    <item>gold ingot</item>
+    <item>gold block</item>
+    <item>golden carrot</item>
+    <item>arrow</item>
+    <item>rotten flesh</item>
+    <item>chest</item>
+    <item>step</item>
+    <item>iron fence</item>
     <item>iron sword</item>
     <item>bow</item>
     <item>arrow</item>
     <item>iron pickaxe</item>
     <item>iron axe</item>
-    <item>stained clay:12</item>
     <item>wood:1</item>
     <item>golden carrot</item>
     <item>stone sword</item>
@@ -332,6 +340,10 @@
     <item>iron chestplate</item>
     <item>chainmail chestplate</item>
     <item>leather boots</item>
+	<item>bucket</item>
+	<item>water bucket</item>
+	<item>obsidian</item>
+	<item>nether star</item>
 </itemremove>
 <killreward>
     <item amount="8">gold nugget</item>
