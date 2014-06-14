@@ -1,27 +1,340 @@
-	<kit name="Attacker">
-		<item amount="1" slot="0" damage="-10000">stone sword</item>
-		<item amount="1" enchantment="arrow infinite:1" slot="1">bow</item>
-		<item amount="1" name="Weak Clay Drill" slot="2">stone pickaxe</item>
-		<item amount="1" slot="3">iron axe</item>
-		<item amount="64" damage="12" slot="4" name="`6`lDirt">stained clay</item>
-		<item amount="64" slot="5">golden carrot</item>
-		<item amount="2" slot="6">golden apple</item>
-		<item amount="8" slot="8">gold nugget</item>
-		<chestplate amount="1">chainmail chestplate</chestplate>
-		<potion duration="oo" amplfiier="1">speed</potion>
-		<potion duration="oo" amplifier="1">night vision</potion>
-	</kit>
-	<kit name="Defender" force="true" parents="spawn">
-		<item amount="1" slot="0" damage="-10000">iron sword</item>
-		<item amount="1" enchantment="arrow infinite:1" slot="1">bow</item>
-		<item amount="1" enchantment="dig speed:2" name="Clay Drill" slot="2">iron pickaxe</item>
-		<item amount="1" slot="3">iron axe</item>
-		<item amount="64" damage="12" slot="4" name="`6`lDirt">stained clay</item>
-		<item amount="64" damage="1" slot="5">wood</item>
-		<item amount="64" slot="7">golden carrot</item>
-		<item amount="8" slot="8">gold nugget</item>
-		<item amount="1" slot="28">arrow</item>
-		<chestplate amount="1">iron chestplate</chestplate>
-		<potion duration="oo" amplifier="1">night vision</potion>
-		<potion duration="oo" amplifier="2">fast digging</potion>
-	</kit>
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>LuminousCTW</name>
+<version>1.0.0</version>
+<objective>Capture both of the enemies wools.</objective>
+<authors>
+    <author>TheZaner</author>
+    <author>ElectroidFilms</author>
+</authors>
+<contributors>
+    <contributor>xXFracXx</contributor>
+    <contributor>lonelyhornet</contributor>
+</contributors>
+<teams>
+   <team color="dark red" max="15">Red Team</team>
+   <team color="blue" max="15">Blue Team</team>
+</teams>
+<wools team="red">
+    <wool color="light blue" craftable="false">
+        <block>-1,16,-170</block>
+    </wool>
+    <wool color="purple" craftable="false">
+        <block>0,16,-170</block>
+    </wool>
+</wools>
+<wools team="blue">
+    <wool color="yellow" craftable="false">
+        <block>0,16,21</block>
+    </wool>
+    <wool color="orange" craftable="false">
+        <block>-1,16,21</block>
+    </wool>
+</wools>
+<kits>
+    <kit name="spawn">
+        <potion duration="5" amplifier="5">damage resistance</potion>
+    </kit>
+    <kit name="resistance">
+        <potion duration="1" amplifier="6">damage resistance</potion>
+    </kit>
+    <kit name="attacker">
+        <item amount="1" slot="0" damage="-10000">stone sword</item>
+        <item amount="1" enchantment="arrow infinite:1" slot="1">bow</item>
+        <item amount="1" name="Weak Clay Drill" slot="2">stone pickaxe</item>
+        <item amount="1" slot="3">iron axe</item>
+        <item amount="64" damage="12" slot="4" name="`6`lDirt">stained clay</item>
+        <item amount="64" slot="5">golden carrot</item>
+        <item amount="2" slot="6">golden apple</item>
+        <item amount="8" slot="8">gold nugget</item>
+        <chestplate amount="1">chainmail chestplate</chestplate>
+        <potion duration="oo" amplfiier="1">speed</potion>
+        <potion duration="oo" amplifier="1">night vision</potion>
+    </kit>
+    <kit name="defender" force="true" parents="spawn">
+        <item amount="1" slot="0" damage="-10000">iron sword</item>
+        <item amount="1" enchantment="arrow infinite:1" slot="1">bow</item>
+        <item amount="1" enchantment="dig speed:2" name="Clay Drill" slot="2">iron pickaxe</item>
+        <item amount="1" slot="3">iron axe</item>
+        <item amount="64" damage="12" slot="4" name="`6`lDirt">stained clay</item>
+        <item amount="64" damage="1" slot="5">wood</item>
+        <item amount="64" slot="7">golden carrot</item>
+        <item amount="8" slot="8">gold nugget</item>
+        <item amount="1" slot="28">arrow</item>
+        <chestplate amount="1">iron chestplate</chestplate>
+        <potion duration="oo" amplifier="1">night vision</potion>
+        <potion duration="oo" amplifier="2">fast digging</potion>
+    </kit>
+    <kit name="red-attacker" parents="attacker">
+        <boots amount="1" color="993333">leather boots</boots>
+    </kit>
+    <kit name="blue-attacker" parents="attacker">
+        <boots amount="1" color="334CB2">leather boots</boots>
+    </kit>
+    <kit name="red-defender" parents="defender">
+        <boots amount="1" color="993333">leather boots</boots>
+    </kit>
+    <kit name="blue-defender" parents="defender">
+        <boots amount="1" color="334CB2">leather boots</boots>
+    </kit>
+</kits>
+<toolrepair>
+    <tool>leather boots</tool>
+    <tool>bow</tool>
+    <tool>chainmail chestplate</tool>
+    <tool>iron chestplate</tool>
+    <tool>stone pickaxe</tool>
+    <tool>iron pickaxe</tool>
+    <tool>diamond pickaxe</tool>
+    <item>iron axe</item>
+</toolrepair>
+<itemremove>
+    <item>gold ingot</item>
+    <item>gold block</item>
+    <item>golden carrot</item>
+    <item>arrow</item>
+    <item>rotten flesh</item>
+    <item>chest</item>
+    <item>step</item>
+    <item>iron fence</item>
+</itemremove>
+<mobs>
+    <filter>
+        <spawn>spawner</spawn>
+    </filter>
+</mobs>
+<timelock>on</timelock>
+<maxbuildheight>42</maxbuildheight>
+<difficulty>1</difficulty>
+<autorespawn/>
+<playable>
+    <cuboid min="68,-oo,-222" max="-70,255,77"/>
+</playable>
+<portals filter="only-red">
+	<!-- red spawn portals -->
+    <portal x="@-0" y="@15" z="@-175">
+        <cuboid min="1,15,-183" max="3,16,-184"/>
+    </portal>
+    <portal x="@-0" y="@15" z="@-175">
+        <cuboid min="-4,16,-183" max="-2,15,-184"/>
+    </portal>
+    <!-- wool room portals -->
+    <portal x="@43" y="@19" z="@56">
+        <cuboid min="48,15,57" max="49,14,60"/>
+    </portal>
+    <portal x="@43" y="@19" z="@56">
+        <cuboid min="37,15,60" max="38,14,57"/>
+    </portal>
+    <portal x="@43" y="@14" z="@57">
+        <block>46,20,61</block>
+    </portal>
+    <portal x="@-44" y="@14" z="@57">
+        <block>-47,20,61</block>
+    </portal>
+    <portal x="@-44" y="@19" z="@56">
+        <cuboid min="-39,15,60" max="-40,14,57"/>
+    </portal>
+    <portal x="@-49" y="@19" z="@56">
+        <cuboid min="-49,14,60" max="-50,16,56"/>
+    </portal>
+</portals>
+<portals filter="only-blue">
+	<!-- blue spawn portals -->
+	<portal x="@-0" y="@15" z="@27">
+        <cuboid min="-4,16,34" max="-2,15,35"/>
+    </portal>
+    <portal x="@-0" y="@15" z="@27">
+        <cuboid min="1,16,34" max="3,15,35"/>
+    </portal>
+    <!-- wool room portals -->
+    <portal x="@-44" y="@19" z="@-205">
+        <cuboid min="-39,14,-209" max="-40,15,-206"/>
+    </portal>
+    <portal x="@-44" y="@19" z="@-205">
+        <cuboid min="-50,14,-209" max="-51,15,-206"/>
+    </portal>
+    <portal x="@-44" y="@14" z="@-205">
+        <block>-47,20,-210</block>
+    </portal>
+    <portal x="@40" y="@19" z="@-204">
+        <cuboid min="48,14,-209" max="49,15,-206"/>
+    </portal>
+    <portal x="@40" y="@19" z="@-204">
+        <cuboid min="37,14,-209" max="38,15,-206"/>
+    </portal>
+    <portal x="@43" y="@14" z="@-205">
+        <block>46,20,-210</block>
+    </portal>
+</portals>
+<filters>
+    <filter name="wool-room" parents="deny-all">
+        <allow><block>iron fence</block></allow>
+        <allow><block>iron block</block></allow>
+        <allow><block>diamond block</block></allow>
+        <allow><block>thin glass</block></allow>
+    </filter>
+    <filter name="woolroom-b">
+        <deny><team>blue</team></deny>
+    </filter>
+    <filter name="woolroom-r">
+        <deny><team>red</team></deny>
+    </filter>
+    <filter name="spawn-b">
+        <deny><team>blue</team></deny>
+    </filter>
+    <filter name="spawn-r">
+        <deny><team>red</team></deny>
+    </filter>
+    <filter name="only-red">
+        <team>red</team>
+    </filter>
+    <filter name="only-blue">
+        <team>blue</team>
+    </filter>
+</filters>
+<regions>
+    <rectangle name="woolroom-r" min="52,-200" max="-54,-217"/>
+    <rectangle name="woolroom-b" min="-54,50" max="52,67"/>
+    <rectangle name="spawn-b" min="7,14" max="-8,46"/>
+    <rectangle name="spawn-r" min="7,-163" max="-8,-196"/>
+    <cuboid name="no-resistance-r" min="-4,15,-172" max="2,16,-172"/>
+    <cuboid name="no-resistance-b" min="2,15,22" max="-4,17,22"/>
+    <cuboid name="spawn-o" min="-34,50,-69" max="-44,38,-79"/>
+    <rectangle name="yellow-woolroom" min="51,-216" max="34,-200"/>
+    <rectangle name="orange-woolroom" min="-37,-216" max="-54,-200"/>
+    <rectangle name="purple-woolroom" min="-36,50" max="-54,67"/>
+    <rectangle name="blue-woolroom" min="52,50" max="34,67"/>
+    <rectangle name="main" min="oo,oo" max="-oo,-oo"/>
+
+    <apply kit="red-defender">
+        <cuboid min="1,15,-183" max="3,16,-184"/>
+    </apply>
+    <apply kit="red-attacker">
+        <cuboid min="-4,16,-183" max="-2,15,-184"/>
+    </apply>
+    <apply kit="blue-defender">
+        <cuboid min="-4,16,34" max="-2,15,35"/>
+    </apply>
+    <apply kit="blue-attacker">
+        <cuboid min="1,16,34" max="3,15,35"/>
+    </apply>
+    <apply kit="resistance">
+        <region name="no-resistance-b"/>
+    </apply>
+    <apply kit="resistance">
+        <region name="no-resistance-r"/>
+    </apply>
+    <apply block-break="deny-all" message="Do not break spawn!">
+        <region name="spawn-o"/>
+    </apply>
+    <apply enter="woolroom-b" message="You may not enter your own wool room.">
+        <region name="purple-woolroom"/>
+        <region name="blue-woolroom"/>
+    </apply>
+    <apply enter="spawn-b" message="You may not enter the enemies spawn">
+        <region name="spawn-r"/>
+    </apply>
+    <apply enter="spawn-r" message="You may not enter the enemies spawn">
+        <region name="spawn-b"/>
+    </apply>
+    <apply enter="woolroom-r" message="You may not enter your own wool room.">
+        <region name="yellow-woolroom"/>
+        <region name="orange-woolroom"/>
+    </apply>
+    <apply block="deny-all" message="You may not edit spawn!">
+        <region name="spawn-b"/>
+        <region name="spawn-r"/>
+    </apply>
+    <apply block-place="deny-all" block-break="wool-room" message="You may only break iron blocks, diamond blocks and iron bars.">
+        <region name="woolroom-r"/>
+        <region name="woolroom-b"/>
+    </apply>
+</regions>
+<spawns>
+    <spawn team="red" kit="spawn" yaw="0">
+        <cuboid min="0,15,-192" max="-2,15,-193"/>
+    </spawn>
+    <spawn team="blue" kit="spawn" yaw="180">
+        <cuboid min="0,15,43" max="-2,15,42"/>
+    </spawn>
+    <default yaw="-90">
+        <block>-39.5,47,-74.5</block>
+    </default>
+</spawns>
+<blockdrops>
+    <rule>
+        <filter>
+            <block>159:5</block>
+        </filter>
+        <drops>
+            <item name="`aGrass" damage="5">stained clay</item>
+        </drops>
+        <wrongtool>true</wrongtool>
+    </rule>
+    <rule>
+        <filter>
+            <block>159:12</block>
+        </filter>
+        <drops>
+            <item name="`6Dirt" damage="12">stained clay</item>
+        </drops>
+        <wrongtool>true</wrongtool>
+    </rule>
+    <rule>
+        <filter>
+            <block>159:7</block>
+        </filter>
+        <drops>
+            <item name="`6Log" damage="7">stained clay</item>
+        </drops>
+        <wrongtool>true</wrongtool>
+    </rule>
+    <rule>
+        <filter>
+            <block>159:13</block>
+        </filter>
+        <drops>
+            <item name="`2Leaf" damage="13">stained clay</item>
+        </drops>
+        <wrongtool>true</wrongtool>
+    </rule>
+    <rule>
+        <filter>
+            <block>159:9</block>
+        </filter>
+        <drops>
+            <item name="`7Stone" damage="9">stained clay</item>
+        </drops>
+        <wrongtool>true</wrongtool>
+    </rule>
+    <rule>
+        <filter>
+            <block>159:1</block>
+        </filter>
+        <drops>
+            <item name="`cLava" damage="1">stained clay</item>
+        </drops>
+        <wrongtool>true</wrongtool>
+    </rule>
+</blockdrops>
+<itemremove>
+    <item>iron sword</item>
+    <item>bow</item>
+    <item>arrow</item>
+    <item>iron pickaxe</item>
+    <item>iron axe</item>
+    <item>stained clay:12</item>
+    <item>wood:1</item>
+    <item>golden carrot</item>
+    <item>stone sword</item>
+    <item>stone pickaxe</item>
+    <item>golden apple</item>
+    <item>iron chestplate</item>
+    <item>chainmail chestplate</item>
+    <item>leather boots</item>
+</itemremove>
+<killreward>
+    <item amount="8">gold nugget</item>
+    <item amount="1">golden apple</item>
+</killreward>
+</map>
