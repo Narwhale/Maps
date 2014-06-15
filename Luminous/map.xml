@@ -199,13 +199,13 @@
     </filter>
 </filters>
 <regions>
-    <rectangle name="woolroom-r" min="52,-199" max="-54,-217"/>
+    <rectangle name="woolroom-r" min="52,-200" max="-54,-217"/>
     <rectangle name="woolroom-b" min="-54,50" max="52,67"/>
     <rectangle name="spawn-b" min="7,14" max="-8,46"/>
     <rectangle name="spawn-r" min="7,-163" max="-8,-196"/>
     <cuboid name="spawn-o" min="-34,50,-69" max="-44,38,-79"/>
-    <rectangle name="yellow-woolroom" min="51,-216" max="34,-199"/>
-    <rectangle name="orange-woolroom" min="-37,-216" max="-54,-199"/>
+    <rectangle name="yellow-woolroom" min="51,-216" max="34,-200"/>
+    <rectangle name="orange-woolroom" min="-37,-216" max="-54,-200"/>
     <rectangle name="purple-woolroom" min="-36,50" max="-54,67"/>
     <rectangle name="blue-woolroom" min="52,50" max="34,67"/>
     <rectangle name="main" min="oo,oo" max="-oo,-oo"/>
