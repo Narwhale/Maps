@@ -54,7 +54,7 @@
 		<potion duration="5" amplifier="255">slow</potion>
 		<potion duration="5" amplifier="155">jump</potion>
     </kit>
-    <kit name="defender" force="true" parents="spawn" potion-particles="false">
+    <kit name="defender" potion-particles="false">
         <item amount="1" slot="0" damage="-10000">iron sword</item>
         <item amount="1" slot="1">bow</item>
         <item amount="1" enchantment="dig speed:2" name="Clay Drill" slot="2">iron pickaxe</item>
@@ -319,8 +319,6 @@
     </rule>
 </blockdrops>
 <itemremove>
-    <item>gold ingot</item>
-    <item>gold block</item>
     <item>golden carrot</item>
     <item>arrow</item>
     <item>rotten flesh</item>
@@ -349,4 +347,7 @@
     <item amount="8">gold nugget</item>
     <item amount="1">golden apple</item>
 </killreward>
+<itemkeep>
+	<item>gold ingot</item>
+</itemkeep>
 </map>
