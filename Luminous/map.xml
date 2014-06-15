@@ -37,6 +37,9 @@
     <kit name="spawn" potion-particles="false">
 	<!-- Placeholder Kit -->
     </kit>
+	<kit name="resistance" force="true">
+		<potion duration="5" amplifier="5">damage resistance</potion>
+	</kit>
     <kit name="attacker" potion-particles="false">
         <item amount="1" slot="0" damage="-10000">stone sword</item>
         <item amount="1" enchantment="arrow infinite:1" slot="1">bow</item>
@@ -119,22 +122,22 @@
         <cuboid min="-4,16,-183" max="-2,15,-184"/>
     </portal>
     <!-- wool room portals -->
-    <portal x="@43" y="@19" z="@56">
+    <portal x="@43.5" y="@19" z="@56">
         <cuboid min="48,15,57" max="49,14,60"/>
     </portal>
-    <portal x="@43" y="@19" z="@56">
+    <portal x="@43.5" y="@19" z="@56">
         <cuboid min="37,15,60" max="38,14,57"/>
     </portal>
     <portal x="@43" y="@14" z="@57">
-        <block>46,20,61</block>
+        <block>46.5,21,61</block>
     </portal>
     <portal x="@-44" y="@14" z="@57">
-        <block>-47,20,61</block>
+        <block>-47.5,21,61</block>
     </portal>
-    <portal x="@-44" y="@19" z="@56">
+    <portal x="@-48.5" y="@19" z="@56">
         <cuboid min="-39,15,60" max="-40,14,57"/>
     </portal>
-    <portal x="@-49" y="@19" z="@56">
+    <portal x="@-48.5" y="@19" z="@56">
         <cuboid min="-49,14,60" max="-50,16,56"/>
     </portal>
 </portals>
@@ -147,23 +150,23 @@
         <cuboid min="1,16,34" max="3,15,35"/>
     </portal>
     <!-- wool room portals -->
-    <portal x="@-44" y="@19" z="@-205">
+    <portal x="@-44.5" y="@19" z="@-205">
         <cuboid min="-39,14,-209" max="-40,15,-206"/>
     </portal>
-    <portal x="@-44" y="@19" z="@-205">
+    <portal x="@-44.5" y="@19" z="@-205">
         <cuboid min="-50,14,-209" max="-51,15,-206"/>
     </portal>
     <portal x="@-44" y="@14" z="@-205">
-        <block>-47,20,-210</block>
+        <block>-47.5,21,-210.5</block>
     </portal>
-    <portal x="@40" y="@19" z="@-204">
+    <portal x="@40.5" y="@19" z="@-204">
         <cuboid min="48,14,-209" max="49,15,-206"/>
     </portal>
-    <portal x="@40" y="@19" z="@-204">
+    <portal x="@40.5" y="@19" z="@-204">
         <cuboid min="37,14,-209" max="38,15,-206"/>
     </portal>
     <portal x="@43" y="@14" z="@-205">
-        <block>46,20,-210</block>
+        <block>46.5,21,-210.5</block>
     </portal>
 </portals>
 <filters>
@@ -209,7 +212,17 @@
     <rectangle name="purple-woolroom" min="-36,50" max="-54,67"/>
     <rectangle name="blue-woolroom" min="52,50" max="34,67"/>
     <rectangle name="main" min="oo,oo" max="-oo,-oo"/>
-
+	
+	<apply kit="resistance">
+		<cuboid min="37,14,-209" max="38,15,-206"/>
+		<cuboid min="48,14,-209" max="49,15,-206"/>
+		<cuboid min="-50,14,-209" max="-51,15,-206"/>
+		<cuboid min="-39,14,-209" max="-40,15,-206"/>
+		<cuboid min="-49,14,60" max="-50,16,56"/>
+		<cuboid min="-39,15,60" max="-40,14,57"/>
+		<cuboid min="-50,14,-209" max="-51,15,-206"/>
+		<cuboid min="48,15,57" max="49,14,60"/>
+	</apply>
     <apply kit="red-defender">
         <cuboid min="1,15,-183" max="3,16,-184"/>
     </apply>
