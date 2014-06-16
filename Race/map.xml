@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.2">
 <name>OCGP: Rage Valley</name>
-<version>1.1.2</version>
+<version>1.1.3</version>
 <objective>Diamond Cup: Be the first car to finish 3 laps.</objective>
 <include src="../race.xml"/>
 <authors>
@@ -35,6 +35,8 @@
 	<cuboid name="kit" min="39,4,47" max="51,6,59"/>
 	<apply kit="kit">
 		<region name="kit"/>
+		<cuboid min="oo,1,oo" max="-oo,3,-oo"/>
+		<cuboid min="110,35,7" max="111,25,-5"/>
 	</apply>
 </regions>
 <spawns>
@@ -53,36 +55,7 @@
     <default yaw="-90"><region name="observers"/></default>
 </spawns>
 <kits>
-    <kit name="spawn" force="true">
-		<item amount="1" name="`c`oBlocked Spot" slot="34">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="35">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="32">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="33">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="9">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="10">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="11">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="12">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="13">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="14">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="15">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="17">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="16">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="19">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="18">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="21">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="20">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="23">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="22">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="25">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="24">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="27">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="26">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="29">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="28">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="31">ender portal</item>
-		<item amount="1" name="`c`oBlocked Spot" slot="30">ender portal</item>
-	</kit>
-	<kit name="kit">
+	<kit name="kit" force="true">
 		<item amount="1" name="`c`oBlocked Spot" slot="34">ender portal</item>
 		<item amount="1" name="`c`oBlocked Spot" slot="35">ender portal</item>
 		<item amount="1" name="`c`oBlocked Spot" slot="32">ender portal</item>
