@@ -5,7 +5,7 @@
 <name>Harmony</name>
 <version>1.0.0</version>
 
-<Objective>Take the enemy's wool and place it in your wool monument.</objective>
+<objective>Take the enemy's wool and place it in your wool monument.</objective>
 
 <authors>
 	<author>DropZone3777</author>
@@ -20,46 +20,52 @@
 </teams>
 
 <spawns>
-	<spawn team="Desert Raiders" kit="dr">
-		<point yaw="163">
-			<cylinder base="-2,16,-54" height="0" radius="2"/>
+	<spawn team="Desert Raiders" kit="dr" safe="true">
+		<point yaw="90">
+			<cylinder base="3,16,51" height="0" radius="1"/>		
+
 		</point>
 	</spawn>
-	<spawn team="Tundra Walkers" kit="tw">
-		<point yaw="270">
-			<cylinder base="3,16,51" height="0" radius"2"/>
+	<spawn team="Tundra Walkers" kit="tw" safe="true">
+		<point yaw="0">
+			<cylinder base="0,16,-51" height="0" radius="1"/>
 		</point>
 	</spawn>
+	<default yaw="90">
+		<cuboid min="1,51,1" max="0,51,0"/> 
+	</default>
 </spawns>
 
 <kits>
 	<kit name="dr">
-		<item slot="0" name="Scimitar">stone sword</item>
+		<item slot="0" damage="-3000" name="Scimitar">stone sword</item>
 		<item slot="1" name="Desert Slingshot">bow</item>
-		<item slot="2" name="Sandstone Breaker" enchantment="durability:10" enchantment="dig_speed:3" enchantment="silk_touch:1">iron pickaxe</item>
-		<item slot="3" name="Sand Excavator" enchantment="durability:10" enchantment="silk_touch:1">stone shovel</item>
-		<item slot="4" name="Hardened Dune Sand" amount="16">hardened clay</item>
+		<item slot="2" name="Sandstone Breaker" enchantment="durability:10;dig speed:3;silk touch:1">iron pickaxe</item>
+		<item slot="3" name="Sand Excavator" enchantment="durability:10;silk touch:1">stone spade</item>
+		<item slot="4" name="Hardened Dune Sand" amount="16">hard clay</item>
 		<item slot="5" name="Sun Baked Wheat" amount="64">bread</item>
 		<item slot="6" name="Edible Glory">golden apple</item>
 		<item slot="8" amount="16">arrow</item>
 		<helmet color="b85933" damage="-3000" name="Sand Raider Goggles">leather helmet</helmet>
 		<chestplate color="b85933" damage="-3000" name="Desert Robes">leather chestplate</chestplate>
-		<leggings damage="-3000" name="Desert Robes">chain leggings</leggings>
+		<leggings damage="-3000" name="Desert Robes">chainmail leggings</leggings>
 		<boots color="b85933" damage="-3000" name="Boots O' the Heat">leather boots</boots>
+		<potion duration="5" amplfier="5">damage resistance</potion>
 	</kit>
 	<kit name="tw">
-		<item slot="0" name="Longsword">stone sword</item>
+		<item slot="0" damage="-3000" name="Longsword">stone sword</item>
 		<item slot="1" name="Winterized Bow">bow</item>
-		<item slot="2" name="Ice Remover" enchantment="durability:10" enchantment="dig_speed:3" enchantment="silk_touch:1">iron pickaxe</item>
-		<item slot="3" name="Snow Shovel" enchantment="durability:10" enchantment="silk_touch:1">stone shovel</item>
-		<item slot="4" name="Packed Tundra Dirt" amount="16">snow</item>
+		<item slot="2" name="Ice Remover" enchantment="durability:10;dig speed:3;silk touch:1">iron pickaxe</item>
+		<item slot="3" name="Snow Shovel" enchantment="durability:10;silk touch:1">stone spade</item>
+		<item slot="4" name="Packed Tundra Dirt" amount="16">snow block</item>
 		<item slot="5" name="Frozen Fish" amount="64">cooked fish</item>
 		<item slot="6" name="Edible Glory">golden apple</item>
 		<item slot="7" amount="16">arrow</item>
-		<helmet color="728c99" damage="-3000" name="Tundra Walker Cowl">leather hemet</helmet>
+		<helmet color="728c99" damage="-3000" name="Tundra Walker Cowl">leather helmet</helmet>
 		<chestplate color="728c99" damage="-3000" name="Tundra Overcoat">leather chestplate</chestplate>
-		<leggings damage="-3000" name="Tundra Overcoat">chain leggings</leggings>
+		<leggings damage="-3000" name="Tundra Overcoat">chainmail leggings</leggings>
 		<boots color="728c99" damage="-3000" name="Frozen Snow Shoes">leather boots</boots>
+		<potion duration="5" amplfier="5">damage resistance</potion>
 	</kit>
 </kits>
 
@@ -67,23 +73,22 @@
 	<tool>stone sword</tool>
 	<tool>bow</tool>
 	<tool>iron pickaxe</tool>
-	<tool>stone shovel</tool>
+	<tool>stone spade</tool>
 </toolrepair>
 
 <itemremove>
 	<item>leather helmet</item>
 	<item>leather chestplate</item>
-	<item>chain leggings</item>
+	<item>chainmail leggings</item>
 	<item>leather boots</item>
-	<item>snow</item>
-	<item>hardened clay</item>
+	<item>snow ball</item>
+	<item>hard clay</item>
 	<item>golden apple</item>
 	<item>cooked fish</item>
 	<item>bread</item>
 	<item>bow</item>
 	<item>soul sand</item>
 	<item>packed ice</item>
-	<item>snowball</item>
 </itemremove>
 
 <filters>
@@ -96,6 +101,12 @@
             <block>ice</block>
         </all></not>
     </filter>
+	<filter name="desert-only">
+		<team>tundra walkers</team>
+	</filter>
+	<filter name="tundra-only">
+		<team>desert raiders</team>
+	</filter>
 </filters>
 
 <killreward>
@@ -103,36 +114,61 @@
 </killreward>
 
 <regions>
-	<union name="snow spawn">
-		<circle center="0,15,-49" radius="11"/>
-		</union>
+		<circle name="snow spawn" center="0,-49" radius="8"/>
 	<union name="snow wool rooms">
-		<circle name="blue island" center="18,0,-54" radius="21"/>
-		<circle name="cyan island" center="-17,0,-54" radius="21"/>
+		<circle name="blue island" center="18,-54" radius="10"/>
+		<circle name="cyan island" center="-17,-54" radius="10"/>
 	</union>
-	<union name="desert spawn">
-		<circle center="0,15,51" radius="11"/>
-	</union>
+		<circle name="desert spawn" center="0,51" radius="8"/>
 	<union name="desert wool rooms">
-		<circle name="red island" center="-17,0,54" radius="21"/>
-		<circle name="orange island" center="18,0,55" radius="21"/>
+		<circle name="red island" center="-17,54" radius="10"/>
+		<circle name="orange island" center="18,55" radius="10"/>
 	</union>
-</regioins>
+	<apply block="deny-blocks" message="You may not break/place blocks in spawn.">
+		<region name="snow spawn"/>
+		<region name="desert spawn"/>
+	</apply>
+	<apply enter="tundra-only" message="You may not enter the enemies spawn.">
+		<region name="desert spawn"/>
+	</apply>
+	<apply enter="desert-only" message="You may not enter the enemies spawn.">
+		<region name="snow spawn"/>
+	</apply>
+	<apply block="deny-blocks" message="You may not edit the wool rooms.">
+		<region name="desert wool rooms"/>
+		<region name="snow wool rooms"/>
+	</apply>
+	<apply enter="tundra-only" message="You may not enter your own wool room.">
+		<region name="snow wool rooms"/>
+	</apply>
+	<apply enter="desert-only" message="You may not enter your own wool room.">
+		<region name="desert wool rooms"/>
+	</apply>
+	<apply block="deny-blocks" enter="deny-players" message="You may not leave or build outside the playable region.">
+		<negative><rectangle min="34,73" max="-34,-73"/></negative>
+	</apply>
+	<apply velocity="@0,1,0">
+		<cuboid min="-1,4,-42" max="2,6,-44"/>
+	</apply>
+	<apply velocity="@0,1,0">
+		<cuboid min="2,4,43" max="-1,6,45"/>
+	</apply>
+</regions>
 
 <maxbuildheight>35</maxbuildheight>
 
 <wools>
-	<wool team="dr" color="blue">
+	<wool team="Desert Raiders" color="blue">
 		<block location="1,11,52"/>
 	</wool>
-	<wool team="dr" color="cyan">
+	<wool team="Desert Raiders" color="cyan">
 		<block location="-1,11 52"/>
 	</wool>
-	<wool team="tw" color="red">
-		<block location="1,10,-51"/>
+	<wool team="Tundra Walkers" color="red">
+		<block location="1,11,-52"/>
 	</wool>
-	<wool team="tw" color="orange">
-		<block location="1,11,52"/>
+	<wool team="Tundra Walkers" color="orange">
+		<block location="-1,11,-52"/>
 	</wool>
 </wools>
 </map>
