@@ -22,29 +22,29 @@
 </blitz>
 <time result="objectives">10m</time>
 <kits>
-    <kit name="green" parents="spawn">
-  <item amount="1" name="?dIron Sword" slot="0">iron sword</item>
-  <item amount="1" enchantment="arrow damage:1" name="?dBow" slot="1">bow</item>
+    <kit name="green">
+  <item amount="1" name="`dIron Sword" slot="0">iron sword</item>
+  <item amount="1" enchantment="arrow damage:1" name="`dBow" slot="1">bow</item>
   <item amount="10" slot="2">golden carrot</item>
   <item amount="1" slot="4">tnt</item>
   <item amount="12" slot="28">arrow</item>
-  <boots amount="1" enchantment="protection fall:2" locked="true" name="?e?lSpeed Boots">gold boots</boots>
+  <boots amount="1" enchantment="protection fall:2" locked="true" name="`e`lSpeed Boots" attributes="generic.movementSpeed:add:0.25">gold boots</boots>
   <leggings amount="1" locked="true" color="7bc11c">leather leggings</leggings>
   <chestplate amount="1" locked="true" enchantment="protection explosions:2;protection projectile:1">iron chestplate</chestplate>
   <helmet amount="1" locked="true" damage="13">stained glass</helmet>
-        <potion duration="3s" amplifier="2" ambient="true">resistance</potion>
+        <potion duration="3" amplifier="5" ambient="true">damage resistance</potion>
 </kit>
-    <kit name="orange" parents="spawn">
-  <item amount="1" name="?dIron Sword" slot="0">iron sword</item>
-  <item amount="1" enchantment="arrow damage:1" name="?dBow" slot="1">bow</item>
+    <kit name="orange">
+  <item amount="1" name="`dIron Sword" slot="0">iron sword</item>
+  <item amount="1" enchantment="arrow damage:1" name="`dBow" slot="1">bow</item>
   <item amount="10" slot="2">golden carrot</item>
   <item amount="1" slot="4">tnt</item>
   <item amount="12" slot="28">arrow</item>
-  <boots amount="1" locked="true" enchantment="protection fall:2" name="?e?lSpeed Boots">gold boots</boots>
+  <boots amount="1" locked="true" enchantment="protection fall:2" name="`e`lSpeed Boots" attributes="generic.movementSpeed:add:0.25">gold boots</boots>
   <leggings amount="1" locked="true" color="d29133">leather leggings</leggings>
   <chestplate amount="1" locked="true" enchantment="protection explosions:2;protection projectile:1">iron chestplate</chestplate>
   <helmet amount="1" locked="true" damage="1">stained glass</helmet>
-        <potion duration="3s" amplifier="2" ambient="true">resistance</potion>
+        <potion duration="3" amplifier="5" ambient="true">damage resistance</potion>
     </kit>
 </kits>
 <itemremove>
@@ -60,7 +60,7 @@
 <tnt>
 <instantignite>true</instantignite>
 <blockdamage>false</blockdamage>
-<fuse>2.5s</fuse>
+<fuse>2s</fuse>
 </tnt>
 <timelock>on</timelock>
 <autorespawn/>
@@ -69,21 +69,26 @@
     <item amount="1">golden apple</item>
     <item amount="1">tnt</item>
 </killreward>
+	<filters>
+	<filter name="allow-tnt" parents="deny-blocks">
+		<allow><block>tnt</block></allow>
+	</filter>
+	</filters>
 <regions>
         <rectangle name="main" min="oo,oo" max="-oo,-oo"/>
-        <cuboid name="jump-pad-a" min="33,4,-69" max="35,5,-67"/>
-        <cuboid name="jump-pad-b" min="3,6,-57" max="1,7,-55"/>
-        <apply enter="deny-players" message="'4You may 'l'onot 'r'4leave the map" min="-7,22,-72" max="39,22,-34"/>
-        </union>
-        <apply velocity="@0,1.8,0">
+        <cuboid name="jump-pad-a" min="32,3,-70" max="36,6,-66"/>
+        <cuboid name="jump-pad-b" min="4,5,-58" max="0,8,-54"/>
+        <apply enter="deny-players" message="You may not leave the map">
+			<negative><cuboid min="-16,0,-84" max="44,22,-29"/></negative>
+		</apply>
+        <apply velocity="@0,1.6,0">
                 <region name="jump-pad-a"/>
         </apply>
         <apply velocity="@0,1.5,0">
                 <region name="jump-pad-b"/>
         </apply>
-        <apply block="deny-blocks">
+        <apply block="allow-tnt">
                 <region name="main"/>
-        </apply>
         </apply>
 </regions>
 <spawns>
@@ -94,7 +99,11 @@
        <cuboid min="34,15,-39" max="36,15,-37"/>
     </spawn>
     <default yaw="0">
-       <cuboid min="3,22,-79" max="5,22,77"/>
+       <cuboid min="3,22,-79" max="5,22,-77"/>
     </default>
 </spawns>
+<disabledamage>
+    <damage ally="true" self="false" enemy="false" other="false">block explosion</damage>
+	<damage>fall</damage>
+</disabledamage>
 </map>
