@@ -1,53 +1,53 @@
 <?xml version ="1.0"?>
 <map proto="1.3.3">
-<name>Lost</name>
-<version>1.0.0</version>
-<objective>Eliminate the other team before the 10 minutes run out.</objective>
-<authors>
-        <author>XxNarwhalexX</author>
-</authors>
-<contributors>
-        <contributor contribution="Feedback and Support">JsKingBoo</contributor>
-        <contributor contribution="XML Help">TheZaner</contributor>
-        <contributor contribution="Feedback">ItsMiiOlly</contributor>
-        <contributor contribution="Testing">ieatboulders2</contributor>
-</contributors>
-<teams>
-        <team color="green" max="10">Green Team</team>
-        <team color="gold" max="10">Orange Team</team>
-</teams>
-<blitz>
+  <name>Lost</name>
+  <version>1.0.0</version>
+  <objective>Eliminate the other team before the 10 minutes run out.</objective>
+  <authors>
+    <author>XxNarwhalexX</author>
+  </authors>
+  <contributors>
+    <contributor contribution="Feedback and Support">JsKingBoo</contributor>
+    <contributor contribution="XML Help">TheZaner</contributor>
+    <contributor contribution="Feedback">ItsMiiOlly</contributor>
+    <contributor contribution="Testing">ieatboulders2</contributor>
+  </contributors>
+  <teams>
+      <team color="green" max="10">Green Team</team>
+      <team color="gold" max="10">Orange Team</team>
+  </teams>
+  <blitz>
     <time>10m</time>
     <lives>2</lives>
-</blitz>
-<time result="objectives">10m</time>
-<kits>
+  </blitz>
+  <time result="objectives">10m</time>
+  <kits>
     <kit name="green">
-  <item amount="1" name="`dIron Sword" slot="0">iron sword</item>
-  <item amount="1" enchantment="arrow damage:1" name="`dBow" slot="1">bow</item>
-  <item amount="10" slot="2">golden carrot</item>
-  <item amount="1" slot="4">tnt</item>
-  <item amount="12" slot="28">arrow</item>
-  <boots amount="1" enchantment="protection fall:2" locked="true" name="`e`lSpeed Boots" attributes="generic.movementSpeed:add:0.25">gold boots</boots>
-  <leggings amount="1" locked="true" color="7bc11c">leather leggings</leggings>
-  <chestplate amount="1" locked="true" enchantment="protection explosions:2;protection projectile:1">iron chestplate</chestplate>
-  <helmet amount="1" locked="true" damage="13">stained glass</helmet>
-        <potion duration="3" amplifier="5" ambient="true">damage resistance</potion>
-</kit>
-    <kit name="orange">
-  <item amount="1" name="`dIron Sword" slot="0">iron sword</item>
-  <item amount="1" enchantment="arrow damage:1" name="`dBow" slot="1">bow</item>
-  <item amount="10" slot="2">golden carrot</item>
-  <item amount="1" slot="4">tnt</item>
-  <item amount="12" slot="28">arrow</item>
-  <boots amount="1" locked="true" enchantment="protection fall:2" name="`e`lSpeed Boots" attributes="generic.movementSpeed:add:0.25">gold boots</boots>
-  <leggings amount="1" locked="true" color="d29133">leather leggings</leggings>
-  <chestplate amount="1" locked="true" enchantment="protection explosions:2;protection projectile:1">iron chestplate</chestplate>
-  <helmet amount="1" locked="true" damage="1">stained glass</helmet>
-        <potion duration="3" amplifier="5" ambient="true">damage resistance</potion>
+      <item amount="1" name="`dIron Sword" slot="0">iron sword</item>
+      <item amount="1" enchantment="arrow damage:1" name="`dBow" slot="1">bow</item>
+      <item amount="10" slot="2">golden carrot</item>
+      <item amount="1" slot="4">tnt</item>
+      <item amount="12" slot="28">arrow</item>
+      <boots amount="1" enchantment="protection fall:2" locked="true" name="`e`lSpeed Boots" attributes="generic.movementSpeed:add:0.25">gold boots</boots>
+      <leggings amount="1" locked="true" color="7bc11c">leather leggings</leggings>
+      <chestplate amount="1" locked="true" enchantment="protection explosions:2;protection projectile:1">iron chestplate</chestplate>
+      <helmet amount="1" locked="true" damage="13">stained glass</helmet>
+      <potion duration="3" amplifier="5" ambient="true">damage resistance</potion>
     </kit>
-</kits>
-<itemremove>
+    <kit name="orange">
+      <item amount="1" name="`dIron Sword" slot="0">iron sword</item>
+      <item amount="1" enchantment="arrow damage:1" name="`dBow" slot="1">bow</item>
+      <item amount="10" slot="2">golden carrot</item>
+      <item amount="1" slot="4">tnt</item>
+      <item amount="12" slot="28">arrow</item>
+      <boots amount="1" locked="true" enchantment="protection fall:2" name="`e`lSpeed Boots" attributes="generic.movementSpeed:add:0.25">gold boots</boots>
+      <leggings amount="1" locked="true" color="d29133">leather leggings</leggings>
+      <chestplate amount="1" locked="true" enchantment="protection explosions:2;protection projectile:1">iron chestplate</chestplate>
+      <helmet amount="1" locked="true" damage="1">stained glass</helmet>
+      <potion duration="3" amplifier="5" ambient="true">damage resistance</potion>
+    </kit>
+  </kits>
+  <itemremove>
     <item>iron sword</item>
     <item>bow</item>
     <item>gold boots</item>
@@ -56,54 +56,54 @@
     <item>95:13</item>
     <item>leather leggings</item>
     <item>arrow</item>
-</itemremove>
-<tnt>
-<instantignite>true</instantignite>
-<blockdamage>false</blockdamage>
-<fuse>2s</fuse>
-</tnt>
-<timelock>on</timelock>
-<autorespawn/>
-<killreward>
+  </itemremove>
+  <tnt>
+    <instantignite>true</instantignite>
+    <blockdamage>false</blockdamage>
+    <fuse>2s</fuse>
+  </tnt>
+  <timelock>on</timelock>
+  <autorespawn/>
+  <killreward>
     <item amount="4">arrow</item>
     <item amount="1">golden apple</item>
     <item amount="1">tnt</item>
-</killreward>
-	<filters>
-	<filter name="allow-tnt" parents="deny-blocks">
-		<allow><block>tnt</block></allow>
-	</filter>
-	</filters>
-<regions>
-        <rectangle name="main" min="oo,oo" max="-oo,-oo"/>
-        <cuboid name="jump-pad-a" min="32,3,-70" max="36,6,-66"/>
-        <cuboid name="jump-pad-b" min="4,5,-58" max="0,8,-54"/>
-        <apply enter="deny-players" message="You may not leave the map">
-			<negative><cuboid min="-16,0,-84" max="44,22,-29"/></negative>
-		</apply>
-        <apply velocity="@0,1.6,0">
-                <region name="jump-pad-a"/>
-        </apply>
-        <apply velocity="@0,1.5,0">
-                <region name="jump-pad-b"/>
-        </apply>
-        <apply block="allow-tnt">
-                <region name="main"/>
-        </apply>
-</regions>
-<spawns>
+  </killreward>
+  <filters>
+    <filter name="allow-tnt" parents="deny-blocks">
+      <allow><block>tnt</block></allow>
+    </filter>
+  </filters>
+  <regions>
+    <rectangle name="main" min="oo,oo" max="-oo,-oo"/>
+    <cuboid name="jump-pad-a" min="32,3,-70" max="36,6,-66"/>
+    <cuboid name="jump-pad-b" min="4,5,-58" max="0,8,-54"/>
+    <apply enter="deny-players" message="You may not leave the map">
+      <negative><cuboid min="-16,0,-84" max="44,22,-29"/></negative>
+    </apply>
+    <apply velocity="@0,1.6,0">
+      <region name="jump-pad-a"/>
+    </apply>
+    <apply velocity="@0,1.5,0">
+      <region name="jump-pad-b"/>
+    </apply>
+    <apply block="allow-tnt">
+      <region name="main"/>
+    </apply>
+  </regions>
+  <spawns>
     <spawn team="orange" kit="orange" yaw="3.5">
-        <cuboid min="-4,15,-66" max="-6,15,-68"/>
+      <cuboid min="-4,15,-66" max="-6,15,-68"/>
     </spawn>
     <spawn team="green" kit="green" yaw="1.5">
-       <cuboid min="34,15,-39" max="36,15,-37"/>
+      <cuboid min="34,15,-39" max="36,15,-37"/>
     </spawn>
     <default yaw="0">
-       <cuboid min="3,22,-79" max="5,22,-77"/>
+      <cuboid min="3,22,-79" max="5,22,-77"/>
     </default>
-</spawns>
-<disabledamage>
+  </spawns>
+  <disabledamage>
     <damage ally="true" self="false" enemy="false" other="false">block explosion</damage>
-	<damage>fall</damage>
-</disabledamage>
+    <damage>fall</damage>
+  </disabledamage>
 </map>
