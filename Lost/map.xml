@@ -7,14 +7,14 @@
     <author>XxNarwhalexX</author>
   </authors>
   <contributors>
-    <contributor contribution="Feedback and Support">JsKingBoo</contributor>
+    <contributor contribution="Feedback">JsKingBoo</contributor>
     <contributor contribution="XML Help">TheZaner</contributor>
     <contributor contribution="Feedback">ItsMiiOlly</contributor>
     <contributor contribution="Testing">ieatboulders2</contributor>
   </contributors>
   <teams>
-      <team color="green" max="10">Green Team</team>
-      <team color="gold" max="10">Orange Team</team>
+      <team color="green" max="10" max-overfill="12">Green Team</team>
+      <team color="gold" max="10" max-overfill="12">Orange Team</team>
   </teams>
   <blitz>
     <time>10m</time>
@@ -62,7 +62,6 @@
     <blockdamage>false</blockdamage>
     <fuse>2s</fuse>
   </tnt>
-  <timelock>on</timelock>
   <autorespawn/>
   <killreward>
     <item amount="4">arrow</item>
