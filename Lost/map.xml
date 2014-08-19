@@ -91,10 +91,10 @@
     </apply>
   </regions>
   <spawns>
-    <spawn team="orange" kit="orange" yaw="3.5">
+    <spawn team="orange" kit="orange" yaw="-45">
       <cuboid min="-4,15,-66" max="-6,15,-68"/>
     </spawn>
-    <spawn team="green" kit="green" yaw="1.5">
+    <spawn team="green" kit="green" yaw="135">
       <cuboid min="34,15,-39" max="36,15,-37"/>
     </spawn>
     <default yaw="0">
