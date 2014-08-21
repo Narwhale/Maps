@@ -33,7 +33,7 @@
 </destroyables>
 <time result="defenders">10m</time>
 <kits>
-  <kit name="spawn">
+  <kit name="defenders">
     <potion duration="5" amplifier="5">damage resistance</potion>
   </kit>
   <kit name="attackers" parents="spawn">
@@ -120,4 +120,15 @@
 	<region name="beacons"/>
   </apply>
 </regions>
+<spawns>
+    <spawn team="attackers" kit="attackers" yaw="90">
+        <cylinder base="117,8,-15" radius="3" height="1"/> 
+    </spawn>
+    <spawn team="defenders" kit="defenders" yaw="-90">
+        <cuboid min="2,13,-71" max="9,13,-78"/>
+    </spawn>
+    <default yaw="270">
+        <cuboid min="-99,7,-17" max="-95,7,-13"/>
+    </default>
+</spawns>
 </map>
