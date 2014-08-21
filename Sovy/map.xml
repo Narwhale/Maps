@@ -13,17 +13,19 @@
   <contributor contribution="XML">TheZaner</contributor>
 </contributors>
 <teams>
-  <team color="lime" max="TBC">Attackers</team>
-  <team color="dark red" max="TBC">Defenders</team>
+  <team color="lime" max="1">Attackers</team>
+  <team color="dark red" max="1">Defenders</team>
 </teams>
 <destroyables name="Left Monument" materials="redstone block" completion="100%" show-progress="true">
   <destroyable owner="defenders">
    <cuboid min="46,16,26" max="45,14,25"/>
   </destroyable>
+</destroyables>
 <destroyables name="Right Monument" materials="redstone block" completion="100%" show-progress="true">
   <destroyable owner="defenders">
    <cuboid min="-20,15,-59" max="-18,23,-61"/>
   </destroyable>
+ </destroyables>
 <destroyables name="Front Monument" materials="redstone block" completion="100%" show-progress="true">
   <destroyable owner="defenders">
    <cuboid min="3,9,-16" max="5,13,-14"/>
@@ -60,15 +62,15 @@
   <item>cooked chicken</item>
   <item>wood</item>
   <item>log</item>
-  <item>stone bricks</item>
+  <item>smooth brick</item>
   <item>step</item>
   <item>sapling</item>
   <item>apple</item>
   <item>fence</item>
   <item>redstone block</item>
-  <item>trapdoor</item>
+  <item>trap door</item>
   <item>glowstone dust</item>
-  <item>wall</item>
+  <item>cobble wall</item>
   <item>potion</item>
   <item>string</item>
   <item>clay</item>
@@ -81,6 +83,8 @@
 <fitlters>
   <filter name="beacon-protections">
     <deny><block>beacon</block></deny>
+  </filter>
+  <filter name="deny-gold"> <!-- For the beacons -->
     <deny><block>gold block</block></deny>
   </filter>
   <filter name="beacon-tnt-protection">
@@ -108,9 +112,12 @@
   </filter>
 </fitlters>
 <regions>
-  <region name="beacons" min="oo,31,oo" max="-oo,oo,-oo"/>
-  <apply block="beacon-protection" use="beacon-protection" message="You may not break/use the beacons. Get down from here!">
+  <cuboid name="beacons" min="oo,31,oo" max="-oo,oo,-oo"/>
+  <apply use="beacon-protections" message="You may not break/use the beacons. Get down from there!">
     <region name="beacons"/>
+  </apply>
+  <apply block-break="deny-gold" message="You may not break/use the beacons. Get down from there!">
+	<region name="beacons"/>
   </apply>
 </regions>
 </map>
