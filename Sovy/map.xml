@@ -4,7 +4,7 @@
 <name>Sovy</name>
 <version>1.0.0</version>
 <objective>
-  Attackers have 10 minutes to destroy the 3 monuments. Defenders must hold them off to win!
+  Attackers have 15 minutes to destroy the 3 monuments. Defenders must hold them off to win!
 </objective>
 <authors>
   <author>Avaleer</author>
@@ -13,30 +13,30 @@
   <contributor contribution="XML">TheZaner</contributor>
 </contributors>
 <teams>
-  <team color="lime" max="1">Attackers</team>
+  <team color="green" max="1">Attackers</team>
   <team color="dark red" max="1">Defenders</team>
 </teams>
-<destroyables name="Left Monument" materials="redstone block" completion="100%" show-progress="true">
-  <destroyable owner="defenders">
-   <cuboid min="46,16,26" max="45,14,25"/>
-  </destroyable>
-</destroyables>
 <destroyables name="Right Monument" materials="redstone block" completion="100%" show-progress="true">
   <destroyable owner="defenders">
-   <cuboid min="-20,15,-59" max="-18,23,-61"/>
+   <cuboid min="-17,14,-58" max="-21,24,-62"/>
   </destroyable>
  </destroyables>
-<destroyables name="Front Monument" materials="redstone block" completion="100%" show-progress="true">
+ <destroyables name="Left Monument" materials="redstone block" completion="100%" show-progress="true">
   <destroyable owner="defenders">
-   <cuboid min="3,9,-16" max="5,13,-14"/>
+   <cuboid min="-17,14,32" max="-21,24,28"/>
   </destroyable>
 </destroyables>
-<time result="defenders">10m</time>
+<destroyables name="Front Monument" materials="redstone block" completion="100%" show-progress="true">
+  <destroyable owner="defenders">
+   <cuboid min="2,8,-17" max="6,14,-13"/>
+  </destroyable>
+</destroyables>
+<time result="defenders">15m</time>
 <kits>
   <kit name="defenders">
     <potion duration="5" amplifier="5">damage resistance</potion>
   </kit>
-  <kit name="attackers" parents="spawn">
+  <kit name="attackers" parents="defenders">
     <item slot="0" damage="-30000">stone sword</item>
     <item slot="1">bow</item>
     <item slot="2">iron pickaxe</item>
@@ -57,6 +57,7 @@
     <tool>iron pickaxe</tool>
     <tool>stone axe</tool>
     <tool>diamond boots</tool>
+	<tool>stone sword</tool>
 </toolrepair>
 <itemremove>
   <item>cooked chicken</item>
@@ -74,13 +75,17 @@
   <item>potion</item>
   <item>string</item>
   <item>clay</item>
+  <item>leather boots</item>
+  <item>leather leggings</item>
+  <item>chainmail chestplate</item>
+  <item>golden carrot</item>
 </itemremove>
 <disabledamage>
     <damage ally="true" self="false" enemy="false" other="false">block explosion</damage>
 </disabledamage>
 <timelock>on</timelock>
 <maxbuildheight>30</maxbuildheight>
-<fitlters>
+<filters>
   <filter name="beacon-protections">
     <deny><block>beacon</block></deny>
   </filter>
@@ -105,18 +110,19 @@
     <deny><block>chest</block></deny>
   </filter>
   <filter name="deny-signs">
-    <deny><block>signs</block></deny>
+    <deny><block>wall sign</block></deny>
+    <deny><block>sign post</block></deny>
   </filter>
   <filter name="only-gold" parents="deny-blocks">
     <allow><block>gold block</block></allow>
   </filter>
-</fitlters>
+</filters>
 <regions>
   <cuboid name="beacons" min="oo,31,oo" max="-oo,oo,-oo"/>
-  <apply use="beacon-protections" message="You may not break/use the beacons. Get down from there!">
+  <apply use="beacon-protections" block-break="beacon-protections" message="You may not break/use the beacons. Get down from there!">
     <region name="beacons"/>
   </apply>
-  <apply block-break="deny-gold" message="You may not break/use the beacons. Get down from there!">
+  <apply block-break="deny-gold" message="You may not break the gold blocks up here! Get down from there!">
 	<region name="beacons"/>
   </apply>
 </regions>
@@ -125,7 +131,7 @@
         <cylinder base="117,8,-15" radius="3" height="1"/> 
     </spawn>
     <spawn team="defenders" kit="defenders" yaw="-90">
-        <cuboid min="2,13,-71" max="9,13,-78"/>
+        <cuboid min="-95,7,-17" max="-99,7,-13"/>
     </spawn>
     <default yaw="270">
         <cuboid min="-99,7,-17" max="-95,7,-13"/>
