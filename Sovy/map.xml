@@ -50,6 +50,10 @@
     <boots color="7fcc19" damage="-30000">leather boots</boots>
     <leggings color="7fcc19" damage="-30000">leather leggings</leggings>
     <chestplate damage="-30000">chainmail chestplate</chestplate>
+    <potion duration="oo" amplifier="2">slow digging</potion>
+  </kit>
+  <kit name="attacker-fatigue" force="true">
+    <potion duration="1" amplfier="3">slow digging</potion>
   </kit>
 </kits>
 <toolrepair>
@@ -116,14 +120,24 @@
   <filter name="only-gold" parents="deny-blocks">
     <allow><block>gold block</block></allow>
   </filter>
+  <filter name="deny-enchanting-table">
+    <deny><block>enchanting table</block></deny>
+  </filter>
 </filters>
 <regions>
   <cuboid name="beacons" min="oo,31,oo" max="-oo,oo,-oo"/>
+  <rectangle name="main" min="oo,oo" max="-oo,-oo"/>
   <apply use="beacon-protections" block-break="beacon-protections" message="You may not break/use the beacons. Get down from there!">
     <region name="beacons"/>
   </apply>
   <apply block-break="deny-gold" message="You may not break the gold blocks up here! Get down from there!">
 	<region name="beacons"/>
+  </apply>
+  <apply block-break="deny-enchanting-table" message="You may not break the enchanting tables.">
+  	<region name="main"/>
+  </apply>
+  <apply kit="attacker-fatigue">
+  	<inverse><cylinder base="117,8,-15" radius="6" height="1"/></inverse>
   </apply>
 </regions>
 <spawns>
