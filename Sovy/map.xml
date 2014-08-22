@@ -35,6 +35,7 @@
 <kits>
   <kit name="defenders">
     <potion duration="5" amplifier="5">damage resistance</potion>
+    <item slot="17">arrow</item>
   </kit>
   <kit name="attackers" parents="defenders">
     <item slot="0" damage="-30000">stone sword</item>
@@ -93,7 +94,7 @@
   <filter name="beacon-protections">
     <deny><block>beacon</block></deny>
   </filter>
-  <filter name="deny-gold"> <!-- For the beacons -->
+  <filter name="deny-gold">
     <deny><block>gold block</block></deny>
   </filter>
   <filter name="beacon-tnt-protection">
@@ -127,7 +128,8 @@
 <regions>
   <cuboid name="beacons" min="oo,31,oo" max="-oo,oo,-oo"/>
   <rectangle name="main" min="oo,oo" max="-oo,-oo"/>
-  <apply use="beacon-protections" block-break="beacon-protections" message="You may not break/use the beacons. Get down from there!">
+  <rectangle name="defender-spawn" min="-45,2" max="-104,-32"/>
+  <apply use="beacon-protections" world="beacon-tnt-protection" block-break="beacon-protections" message="You may not break/use the beacons. Get down from there!">
     <region name="beacons"/>
   </apply>
   <apply block-break="deny-gold" message="You may not break the gold blocks up here! Get down from there!">
@@ -138,6 +140,18 @@
   </apply>
   <apply kit="attacker-fatigue">
   	<inverse><cylinder base="117,8,-15" radius="6" height="1"/></inverse>
+  </apply>
+  <apply world="deny-world">
+  	<region name="defender-spawn"/>
+  </apply>
+  <apply block="only-gold" message="You may only destroy gold in spawn">
+  	<region name="defender-spawn"/>
+  </apply>
+  <apply block="deny-chests" block="deny-signs" message="You may not destroy chests or signs.">
+  	<region name="main"/>
+  </apply>
+  <apply block-place="deny-blocks" message="You may not build outside the map.">
+  	<void/>
   </apply>
 </regions>
 <spawns>
