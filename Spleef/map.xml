@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<map proto="1.3.5">
+    <name>Spleef: NoName</name>
+    <version>1.0.0</version>
+    <objective>Spleef or punch enemies off the edge to their doom within 10 minutes.</objective>
+    <authors>
+        <author>TheZaner</author>
+        <author>XxNarwhalexX</author>
+    </authors>
+    <broadcasts>
+     <tip after="3s">You must remove the enemies clay blocks before killing them.</tip>
+    </broadcasts>
+    <blitz>
+        <time>10m</time>
+        <lives>1</lives>
+        <broadcastLives>true</broadcastLives>
+        <title>Blitz: Spleef</title>
+    </blitz>
+    <include src="blitz-global.xml"/>
+    <destroyables name="Yellow Clay" materials="stained clay:4" completion="100%" sparks="true" show-progress="true" id="yellow-clay">
+        <destroyable owner="yellow">
+            <cuboid min="200,20,200" max="-200,0,-200"/>
+        </destroyable>
+    </destroyables>
+    <destroyables name="Blue Clay" materials="stained clay:3" completion="100%" sparks="true" show-progress="true" id="blue-clay">
+        <destroyable owner="blue">
+            <cuboid min="200,20,200" max="-200,0,-200"/>
+        </destroyable>
+    </destroyables>
+    <destroyables name="Red Clay" materials="stained clay:6" completion="100%" sparks="true" show-progress="true" id="red-clay">
+        <destroyable owner="red">
+            <cuboid min="200,20,200" max="-200,0,-200"/>
+        </destroyable>
+    </destroyables>
+    <destroyables name="Green Clay" materials="stained clay:5" completion="100%" sparks="true" show-progress="true" id="green-clay">
+        <destroyable owner="blue">
+            <cuboid min="200,20,200" max="-200,0,-200"/>
+        </destroyable>
+    </destroyables>
+    <teams>
+       <team color="yellow" max="4" max-overfill="6">Yellow Team</team>
+       <team color="blue" max="4" max-overfill="6">Blue Team</team>
+        <team color="dark red" max="4" max-overfill="6">Red Team</team>
+       <team color="green" max="4" max-overfill="6">Green Team</team>
+    </teams>
+    <kits>
+        <kit name="spawn" force="true">
+          <item amount="1" damage="-30000" slot="0">gold pickaxe</item>
+          <item amount="1" damage="-30000" slot="1">fishing rod</item>
+          <item amount="2" slot="2">tnt</item>
+          <item amount="64" slot="4">snow ball</item>
+          <item amount="64" slot="5">snow ball</item>
+          <item amount="2" damage="60" name="`9`nSummon Backup" slot="6">monster egg</item>
+          <boots damage="-30000" amount="1">chainmail boots</boots>
+          <leggings damage="-30000" amount="1">iron leggings</leggings>
+          <chestplate damage="-30000" amount="1">chainmail chestplate</chestplate>
+           <walk-speed>1.05</walk-speed>
+           <knockback-reduction>0.5</knockback-reduction>
+            <potion duration="oo" amplifier="5">weakness</potion>
+        </kit>
+        <kit name="blue" parents="spawn" locked="true">
+            <helmet damage="11">wool</helmet>
+        </kit>
+        <kit name="red" parents="spawn" locked="true">
+            <helmet damage="14">wool</helmet>
+        </kit>
+        <kit name="green" parents="spawn" locked="true">
+            <helmet damage="5">wool</helmet>
+        </kit>
+        <kit name="yellow" parents="spawn" locked="true">
+             <helmet damage="4">wool</helmet>
+        </kit>
+    </kits>
+    <itemremove>
+        <item>gold pickaxe</item>
+        <item>fishing rod</item>
+        <item>tnt</item>
+        <item>snow ball</item>
+        <item>monster egg</item>
+        <item>chainmail boots</item>
+        <item>chainmail chestplate</item>
+        <item>wool</item>
+        <item>quartz block</item>
+        <item>carpet</item>
+        <item>redstone lamp off</item>
+        <item>step</item>
+        <item>iron plate</item>
+    </itemremove>
+    <disabledamage>
+        <damage ally="true" self="false" enemy="false" other="false">block explosion</damage>
+        <damage>fall</damage>
+    </disabledamage>
+    <tnt>
+        <instantignite>true</instantignite>
+        <power>3</power>
+    </tnt>
+    <mobs>
+        <filter>
+            <spawn>spawner egg</spawn>
+        </filter>
+    </mobs>
+    <timelock>on</timelock>
+    <difficulty>1</difficulty>
+    <hunger>
+     <depletion>off</depletion>
+    </hunger>
+    <regions>
+        <cuboid name="top" min="oo,15,oo" max="-oo,oo,-oo"/>
+        <union name="spawns">
+            <!-- Red -->
+            <cuboid min="-135,3,21" max="-135,2,20"/>
+            <cuboid min="-134,3,15" max="-136,2,19"/>
+            <cuboid min="-133,3,18" max="-133,2,16"/>
+            <cuboid min="-137,3,16" max="-137,2,18"/>
+            <!-- Blue -->
+            <cuboid min="-135,3,55" max="-135,2,56"/>
+            <cuboid min="-134,3,57" max="-136,2,61"/>
+            <cuboid min="-133,3,58" max="-133,2,60"/>
+            <cuboid min="-137,3,60" max="-137,2,58"/>
+            <!-- Green -->
+            <cuboid min="-117,3,38" max="-118,2,38"/>
+            <cuboid min="-113,3,39" max="-116,2,37"/>
+            <cuboid min="-115,3,36" max="-113,2,36"/>
+            <cuboid min="-113,3,40" max="-115,2,40"/>
+            <!-- Yellow -->
+            <cuboid min="-152,3,38" max="-153,2,38"/>
+            <cuboid min="-154,3,39" max="-158,2,37"/>
+            <cuboid min="-157,3,36" max="-155,2,36"/>
+            <cuboid min="-155,3,40" max="-157,2,40"/>
+        </union>
+        <apply world="deny-world">
+            <region name="top"/>
+        </apply>
+        <apply block="deny-blocks" world="deny-world" message="You may not edit spawn">
+            <region name="spawns"/>
+        </apply>
+        <apply block="deny-spawner" world="deny-spawner-world">
+            <rectangle min="oo,oo" max="-oo,-oo"/>
+        </apply>
+    </regions>
+    <filters>
+        <filter name="only-red">
+            <deny><team>blue</team></deny>
+            <deny><team>yellow</team></deny>
+            <deny><team>green</team></deny>
+        </filter>
+        <filter name="only-blue">
+            <deny><team>red</team></deny>
+            <deny><team>yellow</team></deny>
+            <deny><team>green</team></deny>
+
+        </filter>
+        <filter name="only-green">
+            <deny><team>blue</team></deny>
+            <deny><team>yellow</team></deny>
+            <deny><team>red</team></deny>
+        </filter>
+        <filter name="only-yellow">
+            <deny><team>blue</team></deny>
+            <deny><team>red</team></deny>
+            <deny><team>green</team></deny>
+        </filter>
+        <filter name="blue">
+            <all>
+                <team>blue</team>
+                <not><objective>blue-clay</objective></not>
+            </all>
+        </filter>
+        <filter name="red">
+            <all>
+                <team>red</team>
+                <not><objective>red-clay</objective></not>
+            </all>
+        </filter>
+        <filter name="yellow">
+            <all>
+                <team>yellow</team>
+                <not><objective>yellow-clay</objective></not>
+            </all>
+        </filter>
+        <filter name="green">
+            <all>
+                <team>green</team>
+                <not><objective>green-clay</objective></not>
+            </all>
+        </filter>
+    <filter name="deny-spawner-world">
+    <not>
+        <all>
+            <any>
+                <block>mob spawner</block>
+            </any>
+            <any>
+                <filter name="allow-world"/>
+                <filter name="deny-all"/>
+            </any>
+        </all>
+    </not>
+    </filter>
+    <filter name="deny-spawner">
+        <deny><block>mob spawner</block></deny>
+    </filter>
+</filters>
+    <spawns>
+        <spawn team="green" kit="green" yaw="90">
+            <block>-144,3,38</block>
+        </spawn>
+        <spawn team="blue" kit="blue" yaw="180">
+            <block>-135,3,59</block>
+        </spawn>
+        <spawn team="red" kit="red" yaw="0">
+            <block>-135,3,17</block>
+        </spawn>
+        <spawn team="yellow" kit="yellow" yaw="270">
+            <block>-156,3,38</block>
+        </spawn>
+        <default yaw="180">
+            <block>-135,20,38</block>
+        </default>
+    </spawns>
+    <portals>
+    <portal x="@-144" y="@3" z="@38" yaw="@90" filter="green">
+        <cuboid min="oo,-10,oo" max="-oo,-11,-oo"/>
+    </portal>
+    <portal x="@-135" y="@3" z="@59" yaw="@180" filter="blue">
+        <cuboid min="oo,-12,oo" max="-oo,-13,-oo"/>
+    </portal>
+    <portal x="@-135" y="@3" z="@17" yaw="@0" filter="red">
+        <cuboid min="oo,-14,oo" max="-oo,-15,-oo"/>
+    </portal>
+    <portal x="@-156" y="@3" z="@38" yaw="@270" filter="yellow">
+        <cuboid min="oo,-16,oo" max="-oo,-17,-oo"/>
+    </portal>
+</portals>
+</map>
