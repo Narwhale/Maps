@@ -28,6 +28,7 @@
            <cuboid min="100,63,100" max="-100,6,-100"/>
         </destroyable>
     </destroyables>
+    <include src="blitz-global.xml"/>
     <modes>
         <mode after="20s" material="air" show-before="20" name="Fight!"/>
         <mode after="4m" material="95:15" show-before="120" name="Connecting the platforms."/>
@@ -185,12 +186,12 @@
         <rectangle name="playable" min="34,8" max="-60,-86"/>
         <cuboid name="top" min="oo,51,oo" max="-oo,oo,-oo"/>
         <rectangle name="green-side" min="-60,-86" max="-19,-45"/>
-        <rectangle name="red-side" min="-6,-87" max="36,-46"/>
+        <rectangle name="red-side" min="-6,-87" max="36,-45"/>
         <rectangle name="blue-side" min="-6,-32" max="35,10"/>
         <rectangle name="yellow-side" min="-59,-32" max="-19,8"/>
         
         <apply kit="death">
-            <cuboid min="-17,31,-43" max="-9,41,-35"/>
+            <cuboid min="-18,31,-44" max="-8,50,-34"/>
         </apply>
         <apply block="deny-blocks" message="You may not build here.">
             <region name="top"/>
