@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<map proto="1.3.5">
+<name>Asche 2</name>
+<version>1.0.0</version>
+<objective>Be the first team to reach 700 points.</objective>
+<authors>
+    <author>rockymine</author>
+</authors>
+<teams>
+   <team color="dark red" max="24" max-overfill="28">Red Team</team>
+   <team color="blue" max="24" max-overfill="28">Blue Team</team>
+</teams>
+<kits>
+    <kit name="spawn">   
+        <item slot="0">stone sword</item>
+        <item slot="1" enchantment="arrow infinite:1">bow</item>
+        <item slot="28">arrow</item>
+        <item slot="2" amount="16">golden carrot</item>
+        <item slot="3">golden apple</item>
+        <item slot="7" damage="8229">potion</item>
+        <item slot="8" amount="2">golden ingot</item>
+        <chestplate>chainmail chestplate</chestplate>
+        <potion duration="5" amplifier="25">heal</potion>
+        <potion duration="5" amplifier="25">damage resistance</potion>
+    </kit>
+    <kit name="red" parents="spawn">
+        <helmet color="ff0000" damage="-3000">leather helmet</helmet>
+        <boots color="ff0000" damage="-3000">leather boots</boots>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <helmet color="0000ff" damage="-3000">leather helmet</helmet>
+        <boots color="0000ff" damage="-3000">leather boots</boots>
+    </kit>
+</kits>
+<spawns>
+    <spawn team="red" kit="red" yaw="0">
+        <cylinder base="179,2,-473" radius="1" height="0" />
+    </spawn>
+    <spawn team="blue" kit="blue" yaw="179">
+        <cylinder base="179,2,-379" radius="1" height="0" />
+    </spawn>
+    <default yaw="179">
+        <block>179.5,34,-426.5</block>
+    </default>
+</spawns>
+<filters>
+    <filter name="only-red">
+        <team>red</team>
+    </filter>
+    <filter name="only-blue">
+        <team>blue</team>
+    </filter>
+</filters>
+<regions>
+    <union name="spawns">
+        <rectangle name="red-spawn" min="175.5,-478.5" max="183.5,-470.5" />
+        <rectangle name="blue-spawn" min="175.5,-376.5" max="183.5,384.5" />
+    </union>
+    <apply block="deny-all" message="You may not edit spawn!">
+        <region name="spawns" />
+    </apply>
+    <apply enter="only-red" message="You may not enter the enemy team's base!">
+        <cuboid min="175,1,-478" max="183,6,-470"/>
+    </apply>
+    <apply enter="only-blue" message="You may not enter the enemy team's base!">
+        <cuboid min="175,1,-376" max="183,6,-384"/>
+    </apply>
+    <apply enter="deny-all" message="You may not edit the map!">
+        <cuboid min="243,0,-478" max="115,16,-376"/>
+    </apply>    
+</regions>
+<king>
+    <hills>
+      <hill name="West Hill" capture-time="15" points="1">
+       <capture>
+         <cuboid min="139,11,-423" max="147,14,-431"/>
+       </capture>
+       <progress>
+         <cuboid min="139,11,-423" max="147,12,-431"/>
+       </progress>
+       <captured>
+         <cuboid min="140,11,-424" max="146,15,-430"/>
+       </captured>
+     </hill>
+     <hill name="East Hill" capture-time="15" points="1">
+       <capture>
+         <cuboid min="219,11,-431" max="211,14,-423"/>
+       </capture>
+       <progress>
+         <cuboid min="219,11,-431" max="211,12,-423"/>
+       </progress>
+       <captured>
+         <cuboid min="219,11,-430" max="211,15,-424"/>
+       </captured>
+     </hill>
+   </hills>
+</king>
+<score>
+    <limit>700</limit>
+</score>
+<king/>
+<timelock>on</timelock>
+<toolrepair>
+    <tool>stone sword</tool>
+    <tool>bow</tool>
+</toolrepair>
+<itemremove>
+    <item>arrow</item>
+    <item>golden carrot</item>
+    <item>golden apple</item>
+    <item>chainmail chestplate</item>
+    <item>leather helmet</item>
+    <item>leather boots</item>
+    <item>glass bottle</item>
+</itemremove>
+<killreward>
+    <item damage="8229">potion</item>
+    <item amount="8">golden nugget</item>
+</killreward>
+</map>
