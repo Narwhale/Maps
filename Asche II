@@ -18,7 +18,7 @@
         <item slot="2" amount="16">golden carrot</item>
         <item slot="3">golden apple</item>
         <item slot="7" damage="8229">potion</item>
-        <item slot="8" amount="2">golden ingot</item>
+        <item slot="8" amount="2">gold ingot</item>
         <chestplate>chainmail chestplate</chestplate>
         <potion duration="5" amplifier="25">heal</potion>
         <potion duration="5" amplifier="25">damage resistance</potion>
@@ -65,8 +65,8 @@
     <apply enter="only-blue" message="You may not enter the enemy team's base!">
         <cuboid min="175,1,-376" max="183,6,-384"/>
     </apply>
-    <apply enter="deny-all" message="You may not edit the map!">
-        <cuboid min="243,0,-478" max="115,16,-376"/>
+    <apply block="deny-all" message="You may not edit the map!">
+        <rectangle min="oo,oo" max="-oo,-oo"/>
     </apply>    
 </regions>
 <king>
@@ -115,6 +115,6 @@
 </itemremove>
 <killreward>
     <item damage="8229">potion</item>
-    <item amount="8">golden nugget</item>
+    <item amount="8">gold nugget</item>
 </killreward>
 </map>
