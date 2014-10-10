@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<map proto="1.3.5">
+<name>Drop</name>
+<version>1.0.0</version>
+<objective>Capture the enemy team's wool.</objective>
+<authors>
+    <author>rockymine</author>
+</authors>
+<teams>
+    <team color="dark red" max="12" max-overfill="13">Red Team</team>
+    <team color="blue" max="12" max-overfill="13">Blue Team</team>
+</teams>
+<kits>
+    <kit name="spawn">
+        <item slot="0">stone sword</item>
+        <item slot="1" enchantment="arrow infinite:1">bow</item>
+        <item slot="2">iron axe</item>
+        <item slot="3">stone pickaxe</item>
+        <item slot="28">arrow</item>
+        <item slot="7" amount="32">wood</item>
+        <item slot="8" amount="16">cooked chicken</item>
+        <chestplate>gold chestplate</chestplate>
+        <potion duration="5" amplifier="25">heal</potion>
+        <potion duration="5" amplifier="25">damage resistance</potion>
+    </kit>
+    <kit name="red" parents="spawn">
+        <helmet color="ff0000" damage="-3000">leather helmet</helmet>
+        <boots color="ff0000" damage="-3000">leather boots</boots>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <helmet color="0000ff" damage="-3000">leather helmet</helmet>
+        <boots color="0000ff" damage="-3000">leather boots</boots>
+    </kit>
+</kits>
+<spawns>
+    <spawn team="red" kit="red" yaw="90">
+        <cylinder base="424,5,-694" radius="1" height="0"/>
+    </spawn>
+    <spawn team="blue" kit="blue" yaw="-90">
+        <cylinder base="302,5,-694" radius="1" height="0"/>
+    </spawn>
+    <default yaw="90">
+        <block>363.5,35,-694.5</block>
+    </default>
+</spawns>
+<filters>
+    <filter name="only-red">
+        <team>red</team>
+    </filter>
+    <filter name="only-blue">
+        <team>blue</team>
+    </filter>
+    <filter name="deny-manual-blockbreaking">
+        <not>
+            <all>
+                <block>stained clay:11</block>
+                <block>stained clay:14</block>
+                <any>
+                    <filter name="allow-players"/>
+                    <filter name="deny-all"/>
+                </any>
+            </all>
+        </not>
+    </filter>
+</filters>
+<regions>
+    <union name="spawns">
+        <cuboid name="red-spawn" min="418.5,-688.5" max="430.5,-702.5"/>
+        <duboid name="blue-spawn" min="308.5,-688.5" max="296.5,-702.5"/>
+    </union>
+    <union name="wool-cubes">
+        <rectangle name="red-wool-cube" min="396,0,-693" max="392,10,-697"/>
+        <rectangle name="blue-wool-cube" min="334,0,-693" max="330,10,-697"/>
+    </union>
+    <union name="cuboid">
+        <cuboid min="414,0,-710" max="312,50,-680"/>
+    </union>
+    <apply block-break="only-stained glass-and-stained clay" message="You may only break this with TNT">
+        <region name="wool cubes"/>
+    </apply>
+    <apply enter="only-red" message="You may not enter the enemies base!">
+        <region name="red-spawn"/>
+    </apply>
+    <apply enter="only-blue" message="You may not enter the enemies base!">
+        <region name="blue-spawn"/>
+    </apply>
+    <apply block="deny-all" message="You may not edit the team spawns!">
+        <region name="spawns"/>
+    </apply>
+    <apply block="deny-all" message="You may not build outside of the map">
+        <negative>
+                <cuboid min="414,0,-710" max="312,50,-680"/>
+        </negative>
+    </apply>
+    <apply block-break="deny-manual-blockbreaking" message="The Pillar can only be damaged with TNT">
+        <region name="wool-cubes"/>
+    </apply>
+</regions>
+<renewables grow="true" avoid-entities="true" particles="false" sound="false">
+  <renewable rate="15">
+    <region>
+        <region name="cuboid">
+    </region>
+    <renew-filter>
+        <any>
+            <block>stained glass:11</block>
+            <block>stained glass:14</block>
+            <block>stained clay:11</block>
+            <block>stained clay:14</block>
+        </any>
+    </renew-filter>
+    <replace-filter>
+        <any>
+            <block>air</block>
+        </any>
+    </replace-filter>
+  </renewable> 
+</renewables>
+<blockdrops>
+ <blockdrop>
+  <rule>
+    <region>
+        <region name="red-wool-cube"/>
+    </region>
+    <filter>
+        <block>stained clay:14</block>
+    </filter>
+    <drops>
+        <item>wool:14</item>
+    </drops>
+    <replacement>stained clay:14</replacement>
+  </rule>
+ </blockdrop>
+ <blockdrop>
+  <rule>
+    <region>
+        <region name="blue-wool-cube"/>
+    </region>
+    <filter>
+        <block>stained clay:11</block>
+    </filter>
+    <drops>
+        <item>wool:11</item>
+    </drops>
+    <replacement>stained clay:11</replacement>
+  </rule>
+ </blockdrop>
+</blockdrops>
+<killreward>
+    <item amount="8">tnt</item>
+</killreward>
+<wools>
+<wools team="red">
+    <wool color="blue">
+        <block>426,6,-695</block>
+    </wool>
+</wools>
+<wools team="blue">
+    <wool color="blue">
+        <block>300,6,-695</block>
+    </wool>
+</wools>
+<itemremove>
+    <item>wool</item>
+    <item>wood</item>
+    <item>bricks</item>
+    <item>fence</item>
+    <item>gold chestplate</item>
+    <item>leather helmet</item>
+    <item>leather boots</item>
+</itemremove>
+<toolrepair>
+    <tool>stone sword</tool>
+    <tool>iron axe</tool>
+    <tool>bow</tool>
+    <tool>stone pickaxe</tool>
+</toolrepair>
+<maxbuildheight>20</maxbuildheight>
+<timelock>on</timelock>
+<broadcasts>
+    <tip after="1s" every="5m">To get the wool blow up the enemy team's pillar.</tip>
+    <tip after="2s" every="5m">The pillar can only be broken with tnt.</tip>
+    <tip after="3s" every="5m">Stained Clay inside the pillar will drop the wool.</tip>
+</broadcasts>
+</map>
