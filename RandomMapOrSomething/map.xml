@@ -62,21 +62,33 @@
             </all>
         </not>
     </filter>
+    <filter name="only-stained-glass-and-stained-clay">
+        <not>
+            <all>
+                <block>stained glass</block>
+                <block>stained clay</block>
+                <any>
+                    <filter name="allow-players"/>
+                    <filter name="deny-all"/>
+                </any>
+            </all>
+        </not>
+    </filter>
 </filters>
 <regions>
     <union name="spawns">
-        <cuboid name="red-spawn" min="418.5,-688.5" max="430.5,-702.5"/>
-        <duboid name="blue-spawn" min="308.5,-688.5" max="296.5,-702.5"/>
+        <rectangle name="red-spawn" min="418.5,-688.5" max="430.5,-702.5"/>
+        <rectangle name="blue-spawn" min="308.5,-688.5" max="296.5,-702.5"/>
     </union>
     <union name="wool-cubes">
-        <rectangle name="red-wool-cube" min="396,0,-693" max="392,10,-697"/>
-        <rectangle name="blue-wool-cube" min="334,0,-693" max="330,10,-697"/>
+        <cuboid name="red-wool-cube" min="396,0,-693" max="392,10,-697"/>
+        <cuboid name="blue-wool-cube" min="334,0,-693" max="330,10,-697"/>
     </union>
     <union name="cuboid">
         <cuboid min="414,0,-710" max="312,50,-680"/>
     </union>
-    <apply block-break="only-stained glass-and-stained clay" message="You may only break this with TNT">
-        <region name="wool cubes"/>
+    <apply block-break="only-stained-glass-and-stained-clay" message="You may only break this with TNT">
+        <region name="wool-cubes"/>
     </apply>
     <apply enter="only-red" message="You may not enter the enemies base!">
         <region name="red-spawn"/>
@@ -99,7 +111,7 @@
 <renewables grow="true" avoid-entities="true" particles="false" sound="false">
   <renewable rate="15">
     <region>
-        <region name="cuboid">
+        <region name="cuboid"/>
     </region>
     <renew-filter>
         <any>
@@ -160,10 +172,11 @@
         <block>300,6,-695</block>
     </wool>
 </wools>
+</wools>
 <itemremove>
     <item>wool</item>
     <item>wood</item>
-    <item>bricks</item>
+    <item>clay brick</item>
     <item>fence</item>
     <item>gold chestplate</item>
     <item>leather helmet</item>
