@@ -53,22 +53,26 @@
     <filter name="deny-manual-blockbreaking">
         <not>
             <all>
-                <block>stained clay:11</block>
-                <block>stained clay:14</block>
                 <any>
-                    <filter name="allow-players"/>
+                    <block>stained clay:11</block>
+                    <block>stained clay:14</block>
+                </any>
+                <any>
+                    <filter name="allow-world"/>
                     <filter name="deny-all"/>
                 </any>
             </all>
         </not>
     </filter>
-    <filter name="only-stained-glass-and-stained-clay">
+    <filter name="deny-manual-blockbreaking">
         <not>
             <all>
-                <block>stained glass</block>
-                <block>stained clay</block>
                 <any>
-                    <filter name="allow-players"/>
+                    <block>stained glass</block>
+                    <block>stained clay</block>
+                </any>
+                <any>
+                    <filter name="allow-world"/>
                     <filter name="deny-all"/>
                 </any>
             </all>
