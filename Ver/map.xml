@@ -61,20 +61,27 @@
     <king/>
 </score>
 <filters>
-    <filter>
-        <filter name="deny-all">
-    </filter>
+	<filter name="only-red">
+		<not>
+			<team>blue</team>
+		</not>
+	</filter>
+	<filter name="only-blue">
+		<not>
+			<team>red</team>
+		</not>
+	</filter>
 </filters>
 <regions>
     <union name="spawns">
-        <rectangle name="red-spawn" min="129.5,-256.5" max="129.5,-252,5">
-        <rectangle name="blue-spawn" min="49.5,-258.5" max="49.5,-262.5">
+        <rectangle name="red-spawn" min="129.5,-256.5" max="129.5,-252.5"/>
+        <rectangle name="blue-spawn" min="49.5,-258.5" max="49.5,-262.5"/>
     </union>
-    <apply block="deny-all">
+    <apply block="deny-blocks">
         <region name="spawns"/>
     </apply>
     <apply block="deny-all">
-        <rectangle min="-oo.-oo" max="oo,oo"/>
+        <rectangle min="-oo,-oo" max="oo,oo"/>
     </apply>
     <apply enter="only-red">
         <cuboid min="129,6,-256.5" max="129,8,-252"/>
@@ -101,5 +108,5 @@
     <item>stone sword</item>
     <item>bow</item>
 </toolrepair>
-</multitrade>
+<multitrade/>
 </map>
