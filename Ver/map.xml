@@ -61,16 +61,16 @@
     <king/>
 </score>
 <filters>
-	<filter name="only-red">
-		<not>
-			<team>blue</team>
-		</not>
-	</filter>
-	<filter name="only-blue">
-		<not>
-			<team>red</team>
-		</not>
-	</filter>
+    <filter name="only-red">
+        <not>
+            <team>blue</team>
+        </not>
+    </filter>
+    <filter name="only-blue">
+        <not>
+            <team>red</team>
+        </not>
+    </filter>
 </filters>
 <regions>
     <union name="spawns">
