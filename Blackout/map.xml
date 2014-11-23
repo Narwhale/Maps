@@ -290,4 +290,7 @@
         <renew>113</renew>
     </renewable>
 </renewables>
+<broadcasts>
+    <tip after="1s" every="5m" count="5">`cRemember:`7 The monuments are street lamps!</tip>
+</broadcasts>
 </map>
