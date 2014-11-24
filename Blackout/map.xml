@@ -14,7 +14,7 @@
 <king>
    <hills>
       <hill name="Main" id="hill" capture-time="15s">
-         <capture><cylinder base="-16,10,120" radius="8" height="5"/> </capture>
+         <capture><cylinder base="-16,8,120" radius="8" height="8"/></capture>
          <progress><cuboid min="-28,19,131" max="-4,5,108"/></progress>
          <captured><cuboid min="-28,19,131" max="-4,5,108"/></captured>
       </hill>
@@ -52,7 +52,7 @@
         <item slot="19" amount="64">arrow</item>
         <potion duration="5" amplifier="5">damage resistance</potion>
         <potion duration="oo" amplifier="2">slow digging</potion>
-        <walk-speed>1.5</walk-speed>
+        <walk-speed>1.25</walk-speed>
     </kit>
     <kit name="red" parents="spawn">
         <helmet color="cd0000" damage="-30000">leather helmet</helmet>
@@ -65,9 +65,6 @@
         <chestplate>iron chestplate</chestplate>
         <leggings color="0066cc" damage="-30000">leather leggings</leggings>
         <boots color="0066cc" damage="-30000">leather boots</boots>
-    </kit>
-    <kit name="death" force="true">
-        <potion duration="5" amplifier="1">poison</potion>
     </kit>
 </kits>
 <itemremove>
@@ -92,6 +89,7 @@
     <item>wood</item>
     <item>nether brick</item>
     <item>113</item>
+    <item>glowstone dust</item>
 </itemremove>
 <disabledamage>
     <damage>fire</damage>
@@ -122,6 +120,10 @@
         </all>
     </filter>
     <item>diamond sword</item>
+</killreward>
+<killreward>
+   <item amount="8">glass</item>
+   <item>golden apple</item>
 </killreward>
 <timelock>on</timelock>
 <friendlyfirerefund>on</friendlyfirerefund>
