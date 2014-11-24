@@ -273,7 +273,7 @@
     </default>
 </spawns>
 <renewables>
-    <renewable rate="1" particles="true" sound="true" avoid-entities="true">
+    <renewable rate="5" particles="true" sound="true" avoid-entities="true">
         <region>
             <cuboid min="109,65,251" max="-149,0,-10"/>
         </region>
