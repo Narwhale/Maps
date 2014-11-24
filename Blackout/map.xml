@@ -20,7 +20,7 @@
       </hill>
    </hills>
 </king>
-<destroyables name="Street Alpha" materials="glowstone" completion="100%" show-progress="true">
+<destroyables name="Street Alpha" materials="beacon" completion="100%" show-progress="true">
     <destroyable owner="blue">
        <cuboid min="23,17,130" max="96,9,111"/>
     </destroyable>
@@ -28,7 +28,7 @@
        <cuboid min="-130,17,112" max="-60,10,128"/>
     </destroyable>
 </destroyables>
-<destroyables name="Street Beta" materials="glowstone" completion="100%" show-progress="true">
+<destroyables name="Street Beta" materials="beacon" completion="100%" show-progress="true">
     <destroyable owner="blue">
        <cuboid min="-8,17,7" max="-24,9,78"/>
     </destroyable>
@@ -44,6 +44,7 @@
     <kit name="spawn" force="true" potion-particles="false">
         <item slot="0" damage="-30000">iron axe</item>
         <item slot="1" damage="-30000">bow</item>
+        <item slot="2" enchantment="dig speed:3" name="Lamp Smasher">diamond pickaxe</item>
         <item slot="3">golden apple</item>
         <item slot="4" amount="64">golden carrot</item>
         <item slot="5" amount="64">golden carrot</item>
@@ -51,7 +52,6 @@
         <item slot="28" amount="64">arrow</item>
         <item slot="19" amount="64">arrow</item>
         <potion duration="5" amplifier="5">damage resistance</potion>
-        <potion duration="oo" amplifier="4">slow digging</potion>
         <walk-speed>1.25</walk-speed>
     </kit>
     <kit name="red" parents="spawn">
@@ -89,7 +89,7 @@
     <item>wood</item>
     <item>nether brick</item>
     <item>113</item>
-    <item>glowstone dust</item>
+    <item>beacon</item>
     <item>wood step</item>
 </itemremove>
 <disabledamage>
@@ -176,7 +176,7 @@
         <cuboid min="-11,10,184" max="-9,15,186"/>
         <cuboid min="-11,10,169" max="-9,15,171"/>
     </union>
-    <apply blocks="allow-glass" message="You may only place/destroy glass.">
+    <apply blocks="allow-glass deny-blocks" message="You may only place/destroy glass.">
         <negative><region name="blue-monuments"/><region name="red-monuments"/></negative>
     </apply>
     <apply blocks="red-has-control" message="You may only destroy the monument while controlling the hill.">
@@ -208,7 +208,7 @@
             <team>blue</team>
         </all>
     </filter>
-    <filter name="allow-glass" parents="deny-blocks">
+    <filter name="allow-glass">
         <allow><block>glass</block></allow>
     </filter>
     <filter name="deny-red">
