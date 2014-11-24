@@ -41,7 +41,7 @@
    <team id="blue" color="blue" max="30" max-overfill="50">Blue Team</team>
 </teams>
 <kits>
-    <kit name="spawn" force="true">
+    <kit name="spawn" force="true" potion-particles="false">
         <item slot="0" damage="-30000">iron axe</item>
         <item slot="1" damage="-30000">bow</item>
         <item slot="3">golden apple</item>
@@ -51,7 +51,7 @@
         <item slot="28" amount="64">arrow</item>
         <item slot="19" amount="64">arrow</item>
         <potion duration="5" amplifier="5">damage resistance</potion>
-        <potion duration="oo" amplifier="2">slow digging</potion>
+        <potion duration="oo" amplifier="4">slow digging</potion>
         <walk-speed>1.25</walk-speed>
     </kit>
     <kit name="red" parents="spawn">
