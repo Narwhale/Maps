@@ -13,7 +13,7 @@
 </contributors>
 <king>
    <hills>
-      <hill name="Main" id="hill" capture-time="15s">
+      <hill name="Main" id="hill" capture-time="15s" capture-rule="majority">
          <capture><cylinder base="-16,8,120" radius="8" height="8"/></capture>
          <progress><cuboid min="-28,19,131" max="-4,5,108"/></progress>
          <captured><cuboid min="-28,19,131" max="-4,5,108"/></captured>
@@ -90,6 +90,7 @@
     <item>nether brick</item>
     <item>113</item>
     <item>glowstone dust</item>
+    <item>wood step</item>
 </itemremove>
 <disabledamage>
     <damage>fire</damage>
@@ -290,6 +291,7 @@
         <renew>wood</renew>
         <renew>nether brick</renew>
         <renew>113</renew>
+        <renew>wood step</renew>
     </renewable>
 </renewables>
 <broadcasts>
