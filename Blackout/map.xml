@@ -91,6 +91,15 @@
     <item>113</item>
     <item>beacon</item>
     <item>wood step</item>
+    <item>carpet</item>
+ 	 <item>wood step</item>
+	 <item>sapling</item>
+	 <item>dark oak stairs</item>
+ 	 <item>spruce wood stairs</item>
+ 	 <item>fence</item>
+	 <item>log</item>
+ 	 <item>33</item>
+ 	 <item>43</item>
 </itemremove>
 <disabledamage>
     <damage>fire</damage>
@@ -292,6 +301,15 @@
         <renew>nether brick</renew>
         <renew>113</renew>
         <renew>wood step</renew>
+        <renew>carpet</renew>
+		  <renew>wood step</renew>
+		  <renew>sapling</renew>
+		  <renew>dark oak stairs</renew>
+	  	  <renew>spruce wood stairs</renew>
+		  <renew>fence</renew>
+		  <renew>43</renew>
+		  <renew>log</renew>
+		  <renew>33</renew>
     </renewable>
 </renewables>
 <broadcasts>
