@@ -140,6 +140,8 @@
 	        <block>thin glass</block>
 	        <block>leaf</block>
 	        <block>ice</block>
+	        <block>snow</block>
+	        <block>snow block</block>
         </allow>
     </filter>
 </filters>
