@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map proto="1.3.6">
-<name>Blackout</name>
+<name>Merry Blackout</name>
 <version>1.0.0</version>
-<objective>Capture the hill and then destroy the opponents lamps to win.</objective>
+<objective>Have the most kills after 10 minutes to win.</objective>
 <authors>
    <author>TheZaner</author>
    <author>Timothee38</author>
@@ -14,11 +14,11 @@
    <contributor contribution="Christmas Tree">_IQ</contributor>
 </contributors>
 <score>
-    <time>5m</time>
+    <time>10m</time>
 </score>
 <teams>
    <team id="red" color="dark red" max="30" max-overfill="50">Reindeer Team</team>
-   <team id="blue" color="green" max="30" max-overfill="50">Elf Team</team>
+   <team id="green" color="green" max="30" max-overfill="50">Elf Team</team>
 </teams>
 <kits>
     <kit name="spawn" force="true" potion-particles="false">
