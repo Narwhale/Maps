@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map proto="1.3.6">
+<name>Blackout</name>
+<version>1.0.0</version>
+<objective>Capture the hill and then destroy the opponents lamps to win.</objective>
+<authors>
+   <author>TheZaner</author>
+   <author>Timothee38</author>
+   <author contribution="Crane based Criticism">BrettOgden</author>
+</authors>
+<contributors>
+   <contributor contribution="Fire Engine based Criticism">ElectroidFilms</contributor>
+</contributors>
+<king>
+   <hills>
+      <hill name="Main" id="hill" capture-time="15s" capture-rule="majority">
+         <capture><cylinder base="-16,8,120" radius="8" height="8"/></capture>
+         <progress><cuboid min="-28,19,131" max="-4,5,108"/></progress>
+         <captured><cuboid min="-28,19,131" max="-4,5,108"/></captured>
+      </hill>
+   </hills>
+</king>
+<destroyables name="Street Alpha" materials="beacon" completion="100%" show-progress="true">
+    <destroyable owner="blue">
+       <cuboid min="23,17,130" max="96,9,111"/>
+    </destroyable>
+    <destroyable owner="red">
+       <cuboid min="-130,17,112" max="-60,10,128"/>
+    </destroyable>
+</destroyables>
+<destroyables name="Street Beta" materials="beacon" completion="100%" show-progress="true">
+    <destroyable owner="blue">
+       <cuboid min="-8,17,7" max="-24,9,78"/>
+    </destroyable>
+    <destroyable owner="red">
+       <cuboid min="-28,17,233" max="-8,9,158"/>
+    </destroyable>
+</destroyables>
+<teams>
+   <team id="red" color="dark red" max="30" max-overfill="50">Red Team</team>
+   <team id="blue" color="blue" max="30" max-overfill="50">Blue Team</team>
+</teams>
+<kits>
+    <kit name="spawn" force="true" potion-particles="false">
+        <item slot="0" damage="-30000">iron axe</item>
+        <item slot="1" damage="-30000">bow</item>
+        <item slot="2" enchantment="dig speed:3" name="Lamp Smasher">diamond pickaxe</item>
+        <item slot="3">golden apple</item>
+        <item slot="4" amount="64">golden carrot</item>
+        <item slot="5" amount="64">golden carrot</item>
+        <item slot="6" amount="8">glass</item>
+        <item slot="28" amount="64">arrow</item>
+        <item slot="19" amount="64">arrow</item>
+        <potion duration="5" amplifier="5">damage resistance</potion>
+        <walk-speed>1.25</walk-speed>
+    </kit>
+    <kit name="red" parents="spawn">
+        <helmet color="cd0000" damage="-30000">leather helmet</helmet>
+        <chestplate>iron chestplate</chestplate>
+        <leggings color="cd0000" damage="-30000">leather leggings</leggings>
+        <boots color="cd0000" damage="-30000">leather boots</boots>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <helmet color="0066cc" damage="-30000">leather helmet</helmet>
+        <chestplate>iron chestplate</chestplate>
+        <leggings color="0066cc" damage="-30000">leather leggings</leggings>
+        <boots color="0066cc" damage="-30000">leather boots</boots>
+    </kit>
+</kits>
+<itemremove>
+    <item>iron axe</item>
+    <item>bow</item>
+    <item>arrow</item>
+    <item>leather helmet</item>
+    <item>iron chestplate</item>
+    <item>leather leggings</item>
+    <item>leather boots</item>
+    <item>golden carrot</item>
+    <item>gold block</item>
+    <item>44</item>
+    <item>stained clay</item>
+    <item>thin glass</item>
+    <item>wool</item>
+    <item>tnt</item>
+    <item>trapped chest</item>
+    <item>wooden door</item>
+    <item>sign</item>
+    <item>redstone block</item>
+    <item>wood</item>
+    <item>nether brick</item>
+    <item>113</item>
+    <item>beacon</item>
+    <item>wood step</item>
+    <item>carpet</item>
+ 	 <item>wood step</item>
+	 <item>sapling</item>
+	 <item>dark oak stairs</item>
+ 	 <item>spruce wood stairs</item>
+ 	 <item>fence</item>
+	 <item>log</item>
+ 	 <item>33</item>
+ 	 <item>43</item>
+</itemremove>
+<disabledamage>
+    <damage>fire</damage>
+    <damage>fire tick</damage>
+</disabledamage>
+<killreward>
+    <filter>
+        <all>
+            <kill-streak count="3"/>
+        </all>
+    </filter>
+    <item>iron sword</item>
+</killreward>
+<killreward>
+    <filter>
+        <all>
+            <kill-streak count="5"/>
+        </all>
+    </filter>
+    <kit force="true">
+        <chestplate>diamond chestplate</chestplate>
+    </kit>
+</killreward>
+<killreward>
+    <filter>
+        <all>
+            <kill-streak count="10"/>
+        </all>
+    </filter>
+    <item>diamond sword</item>
+</killreward>
+<killreward>
+   <item amount="8">glass</item>
+   <item>golden apple</item>
+</killreward>
+<timelock>on</timelock>
+<friendlyfirerefund>on</friendlyfirerefund>
+<autorespawn/>
+<time result="objectives">15m</time>
+<regions>
+    <rectangle name="main" min="oo,oo" max="-oo,-oo"/>
+    <union name="red-monuments">
+        <cuboid min="-11,10,13" max="-9,15,15"/>
+        <cuboid min="-11,10,28" max="-9,15,30"/>
+        <cuboid min="-11,10,43" max="-9,15,45"/>
+        <cuboid min="-11,10,58" max="-9,15,60"/>
+        <cuboid min="-11,10,73" max="-9,15,75"/>
+        <cuboid min="-23,10,69" max="-21,15,71"/>
+        <cuboid min="-23,10,54" max="-21,15,56"/>
+        <cuboid min="-23,10,39" max="-21,15,41"/>
+        <cuboid min="-23,10,24" max="-21,15,26"/>
+        <cuboid min="-23,10,9" max="-21,15,11"/>
+        <cuboid min="32,10,113" max="34,15,115"/>
+        <cuboid min="47,10,113" max="49,15,115"/>
+        <cuboid min="62,10,113" max="64,15,115"/>
+        <cuboid min="77,10,113" max="79,15,115"/>
+        <cuboid min="92,10,113" max="94,15,115"/>
+        <cuboid min="88,10,125" max="90,15,127"/>
+        <cuboid min="73,10,125" max="75,15,127"/>
+        <cuboid min="58,10,125" max="60,15,127"/>
+        <cuboid min="43,10,125" max="45,15,127"/>
+        <cuboid min="28,10,125" max="30,15,127"/>
+    </union>
+    <union name="blue-monuments">
+        <cuboid min="-635,10,113" max="-61,15,115"/>
+        <cuboid min="-78,10,113" max="-76,15,115"/>
+        <cuboid min="-93,10,113" max="-91,15,115"/>
+        <cuboid min="-108,10,113" max="-106,15,115"/>
+        <cuboid min="-123,10,113" max="-121,15,115"/>
+        <cuboid min="-67,10,125" max="-65,15,127"/>
+        <cuboid min="-82,10,125" max="-80,15,127"/>
+        <cuboid min="-97,10,125" max="-95,15,127"/>
+        <cuboid min="-112,10,125" max="-110,15,127"/>
+        <cuboid min="-127,10,125" max="-125,15,127"/>
+        <cuboid min="-23,10,165" max="-21,15,167"/>
+        <cuboid min="-23,10,180" max="-21,15,182"/>
+        <cuboid min="-23,10,195" max="-21,15,197"/>
+        <cuboid min="-23,10,210" max="-21,15,212"/>
+        <cuboid min="-23,10,225" max="-21,15,227"/>
+        <cuboid min="-11,10,229" max="-9,15,231"/>
+        <cuboid min="-11,10,214" max="-9,15,216"/>
+        <cuboid min="-11,10,199" max="-9,15,201"/>
+        <cuboid min="-11,10,184" max="-9,15,186"/>
+        <cuboid min="-11,10,169" max="-9,15,171"/>
+    </union>
+    <apply blocks="allow-glass deny-blocks" message="You may only place/destroy glass.">
+        <negative><region name="blue-monuments"/><region name="red-monuments"/></negative>
+    </apply>
+    <apply blocks="red-has-control" message="You may only destroy the monument while controlling the hill.">
+        <region name="blue-monuments"/>
+    </apply>
+    <apply blocks="blue-has-control" message="You may only destroy the monument while controlling the hill.">
+        <region name="red-monuments"/>
+    </apply>
+    <apply blocks="deny-blue" message="You may not destroy your own monument.">
+        <region name="blue-monuments"/>
+    </apply>
+    <apply blocks="deny-red" message="You may not destroy your own monument.">
+        <region name="red-monuments"/>
+    </apply>
+    <apply world="deny-world">
+        <region name="main"/>
+    </apply>
+</regions>
+<filters>
+    <filter name="red-has-control">
+        <all>
+            <objective team="red">hill</objective>
+            <team>red</team>
+        </all>
+    </filter>
+    <filter name="blue-has-control">
+        <all>
+            <objective team="blue">hill</objective>
+            <team>blue</team>
+        </all>
+    </filter>
+    <filter name="allow-glass">
+        <allow><block>glass</block></allow>
+    </filter>
+    <filter name="deny-red">
+        <team>red</team>
+    </filter>
+    <filter name="deny-blue">
+        <team>blue</team>
+    </filter>
+</filters>
+<spawns>
+    <spawns safe="true">
+        <spawn team="red" kit="red" yaw="-90">
+            <block>5,16,225</block>
+            <block>3,15,207</block>
+            <block>5,16,189</block>
+            <block>5,16,171</block>
+        </spawn>
+        <spawn team="red" kit="red" yaw="90">
+            <block>-38,16,171</block>
+            <block>-38,16,189</block>
+            <block>-38,16,207</block>
+            <block>-38,16,225</block>
+        </spawn>
+        <spawn team="red" kit="red" yaw="0">
+            <block>-67,16,142</block>
+            <block>-85,16,142</block>
+            <block>-103,16,142</block>
+            <block>-121,16,142</block>
+        </spawn>
+        <spawn team="red" kit="red" yaw="180">
+            <block>-121,16,98</block>
+            <block>-103,16,98</block>
+            <block>-85,16,98</block>
+            <block>-67,16,98</block>
+        </spawn>
+        <spawn team="blue" kit="blue" yaw="0">
+            <block>34,16,142</block>
+            <block>52,16,142</block>
+            <block>70,16,142</block>
+            <block>88,16,142</block>
+        </spawn>
+        <spawn team="blue" kit="blue" yaw="180">
+            <block>88,16,98</block>
+            <block>69,16,100</block>
+            <block>52,16,98</block>
+            <block>34,16,98</block>
+        </spawn>
+        <spawn team="blue" kit="blue" yaw="-90">
+            <block>5,16,69</block>
+            <block>5,16,51</block>
+            <block>5,16,33</block>
+            <block>5,16,15</block>
+        </spawn>
+        <spawn team="blue" kit="blue" yaw="90">
+            <block>-38,16,15</block>
+            <block>-35,16,31</block>
+            <block>-38,16,51</block>
+            <block>-38,16,69</block>
+        </spawn>
+    </spawns>
+    <default yaw="90">
+        <block>103.5,19,120</block>
+    </default>
+</spawns>
+<renewables>
+    <renewable rate="5" particles="true" sound="true" avoid-entities="true">
+        <region>
+            <cuboid min="109,65,251" max="-149,0,-10"/>
+        </region>
+        <renew>gold block</renew>
+        <renew>44</renew>
+        <renew>stained clay</renew>
+        <renew>thin glass</renew>
+        <renew>wool</renew>
+        <renew>tnt</renew>
+        <renew>trapped chest</renew>
+        <renew>wooden door</renew>
+        <renew>wall sign</renew>
+        <renew>redstone block</renew>
+        <renew>wood</renew>
+        <renew>nether brick</renew>
+        <renew>113</renew>
+        <renew>wood step</renew>
+        <renew>carpet</renew>
+		  <renew>wood step</renew>
+		  <renew>sapling</renew>
+		  <renew>dark oak stairs</renew>
+	  	  <renew>spruce wood stairs</renew>
+		  <renew>fence</renew>
+		  <renew>43</renew>
+		  <renew>log</renew>
+		  <renew>33</renew>
+    </renewable>
+</renewables>
+<broadcasts>
+    <tip after="1s" every="5m" count="5">`cRemember:`7 The monuments are street lamps!</tip>
+</broadcasts>
+</map>
