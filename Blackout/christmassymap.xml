@@ -2,7 +2,7 @@
 <map proto="1.3.6">
 <name>Merry Blackout</name>
 <version>1.0.0</version>
-<objective>Capture the hill and then destroy the opponents lamps to win.</objective>
+<objective>Have the most kills after 10 minutes to win.</objective>
 <authors>
    <author>TheZaner</author>
    <author>Timothee38</author>
