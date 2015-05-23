@@ -8,7 +8,7 @@
   </authors>
   <contributors>
     <contributor contribution="Feedback">JsKingBoo</contributor>
-    <contributor contribution="XML Help">TheZaner</contributor>
+    <contributor contribution="XML">TheZaner</contributor>
     <contributor contribution="Feedback">ItsMiiOlly</contributor>
     <contributor contribution="Testing">ieatboulders2</contributor>
   </contributors>
@@ -32,7 +32,7 @@
       <leggings amount="1" locked="true" color="7bc11c">leather leggings</leggings>
       <chestplate amount="1" locked="true" enchantment="protection explosions:2;protection projectile:1">iron chestplate</chestplate>
       <helmet amount="1" locked="true" damage="13">stained glass</helmet>
-      <potion duration="3" amplifier="5" ambient="true">damage resistance</potion>
+      <potion duration="2" amplifier="4" ambient="true">damage resistance</potion>
     </kit>
     <kit name="orange">
       <item amount="1" name="`dIron Sword" slot="0">iron sword</item>
@@ -44,7 +44,7 @@
       <leggings amount="1" locked="true" color="d29133">leather leggings</leggings>
       <chestplate amount="1" locked="true" enchantment="protection explosions:2;protection projectile:1">iron chestplate</chestplate>
       <helmet amount="1" locked="true" damage="1">stained glass</helmet>
-      <potion duration="3" amplifier="5" ambient="true">damage resistance</potion>
+      <potion duration="2" amplifier="4" ambient="true">damage resistance</potion>
     </kit>
   </kits>
   <itemremove>
