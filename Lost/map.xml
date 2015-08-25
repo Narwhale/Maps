@@ -1,16 +1,16 @@
 <?xml version ="1.0"?>
 <map proto="1.3.3">
   <name>Lost</name>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <objective>Eliminate the other team before the 10 minutes run out.</objective>
   <authors>
     <author>XxNarwhalexX</author>
   </authors>
   <contributors>
+    <contributor contribution="XML">Zan</contributor>
     <contributor contribution="Feedback and Support">JsKingBoo</contributor>
-    <contributor contribution="XML Help">TheZaner</contributor>
-    <contributor contribution="Feedback">ItsMiiOlly</contributor>
-    <contributor contribution="Testing">ieatboulders2</contributor>
+    <contributor contribution="Feedback">ollyj</contributor>
+    <contributor contribution="Aesthetic Feedback">AFR0</contributor></contributor>
   </contributors>
   <teams>
       <team color="green" max="10">Green Team</team>
@@ -30,7 +30,7 @@
       <item amount="12" slot="28">arrow</item>
       <boots amount="1" enchantment="protection fall:2" locked="true" name="`e`lSpeed Boots" attributes="generic.movementSpeed:add:0.25">gold boots</boots>
       <leggings amount="1" locked="true" color="7bc11c">leather leggings</leggings>
-      <chestplate amount="1" locked="true" enchantment="protection explosions:2;protection projectile:1">iron chestplate</chestplate>
+      <chestplate amount="1" locked="true" enchantment="protection explosions:1;protection projectile:1">iron chestplate</chestplate>
       <helmet amount="1" locked="true" damage="13">stained glass</helmet>
       <potion duration="3" amplifier="5" ambient="true">damage resistance</potion>
     </kit>
@@ -42,7 +42,7 @@
       <item amount="12" slot="28">arrow</item>
       <boots amount="1" locked="true" enchantment="protection fall:2" name="`e`lSpeed Boots" attributes="generic.movementSpeed:add:0.25">gold boots</boots>
       <leggings amount="1" locked="true" color="d29133">leather leggings</leggings>
-      <chestplate amount="1" locked="true" enchantment="protection explosions:2;protection projectile:1">iron chestplate</chestplate>
+      <chestplate amount="1" locked="true" enchantment="protection explosions:1;protection projectile:1">iron chestplate</chestplate>
       <helmet amount="1" locked="true" damage="1">stained glass</helmet>
       <potion duration="3" amplifier="5" ambient="true">damage resistance</potion>
     </kit>
@@ -65,9 +65,9 @@
   <timelock>on</timelock>
   <autorespawn/>
   <killreward>
-    <item amount="4">arrow</item>
+    <item amount="6">arrow</item>
     <item amount="1">golden apple</item>
-    <item amount="1">tnt</item>
+    <item amount="2">tnt</item>
   </killreward>
   <filters>
     <filter name="allow-tnt" parents="deny-blocks">
@@ -93,10 +93,10 @@
   </regions>
   <spawns>
     <spawn team="orange" kit="orange" yaw="3.5">
-      <cuboid min="-4,15,-66" max="-6,15,-68"/>
+      <cuboid min="-3,16,-65" max="-6,16,-68"/>
     </spawn>
     <spawn team="green" kit="green" yaw="1.5">
-      <cuboid min="34,15,-39" max="36,15,-37"/>
+      <cuboid min="33,16,-39" max="36,16,-36"/>
     </spawn>
     <default yaw="0">
       <cuboid min="3,22,-79" max="5,22,-77"/>
